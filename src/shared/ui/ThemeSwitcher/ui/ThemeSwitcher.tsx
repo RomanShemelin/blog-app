@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ThemeSwitcher.module.scss'
 
 import type { PropsWithChildren } from 'react'
 import { Theme, useTheme } from 'app/providers/ThemeProvider'
@@ -19,7 +18,7 @@ export function ThemeSwitcher ({
   return (
       <Button
       theme={themeButton.CLEAR}
-      className={classNames(cls.ThemeSwitcher, {}, [className])}
+      className={classNames('', {}, [className])}
       onClick={toggleTheme}
     >
           {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
