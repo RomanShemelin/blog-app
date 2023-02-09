@@ -25,6 +25,7 @@ module.exports = {
     "@typescript-eslint/strict-boolean-expressions": "warn",
     "@typescript-eslint/naming-convention": "warn",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
+    "max-len": ["error", {ignoreComments: true}]
   },
   globals: {
     __IS_DEV__: true,
