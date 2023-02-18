@@ -44,5 +44,5 @@ module.exports = {
       },
     },
   ],
-  eslintIgnore: ["./config/**/*.ts", "webpack.config.ts"],
+  ignorePatterns: ["config/*", "webpack.config.ts"],
 };
