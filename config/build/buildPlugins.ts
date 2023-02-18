@@ -16,11 +16,11 @@ export function bulidPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
     }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
-    }),
+    })
   ]
-  if(isDev){
+  if (isDev) {
     plugins.push(new webpack.HotModuleReplacementPlugin())
-    plugins.push( new BundleAnalyzerPlugin({
+    plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false
     }))
   }

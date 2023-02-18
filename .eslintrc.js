@@ -24,6 +24,9 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": "warn",
     "@typescript-eslint/strict-boolean-expressions": "warn",
     "@typescript-eslint/naming-convention": "warn",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true , ignoreAttribute: ['data-testid', 'to']}],
     "max-len": ["error", {ignoreComments: true}, { "code": 100 }]
   },
