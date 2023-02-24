@@ -9,5 +9,7 @@
   "throw error": "throw error",
   "toggle": "toggle",
   "О сайте": "About us",
-  "Короткий язык": "En"
+  "Короткий язык": "En",
+  "increment": "increment",
+  "decrement": "decrement"
 }
