@@ -1,5 +1,11 @@
 {
   "": "",
+  " username": " username",
+  " пароль": " пароль",
+  "Enter": "Enter",
+  "Enter password": "Enter password",
+  "Enter username": "Enter username",
+  "Enter пароль": "Enter пароль",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
     " Sapiente nesciunt saepe quasi dignissimos explicabo eum sint quod voluptatem": {
       " Quibusdam, ipsum?": ""
@@ -7,6 +13,8 @@
     " ipsum?": ""
   },
   "decrement": "",
+  "enter username": "enter username",
+  "enter пароль": "enter пароль",
   "increment": "",
   "lorem20": "",
   "lorem20 ": "",
@@ -16,6 +24,10 @@
   "throw ": "throw ",
   "throw error": "throw error",
   "toggle": "toggle",
+  "В": "В",
+  "Ввведите ": "Ввведите ",
+  "Ввведите username": "Ввведите username",
+  "Ввведите пароль": "Ввведите пароль",
   "Войти": "Войти",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
@@ -26,6 +38,9 @@
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
   "Произощла непредвиденная ошибка": "Произощла непредвиденная ошибка",
   "Страница не найдена": "Страница не найдена",
+  "Утеук": "Утеук",
+  "Утеук username": "Утеук username",
+  "Утеук пароль": "Утеук пароль",
   "Язык": "Язык",
   "войти": "войти"
 }
