@@ -6,9 +6,13 @@
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Enter пароль": "Enter пароль",
+  "Lo": "Lo",
+  "Log": "Log",
+  "Logout": "Logout",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
     " ipsum?": " ipsum?"
   },
+  "authorization form": "authorization form",
   "decrement": "decrement",
   "enter username": "enter username",
   "enter пароль": "enter пароль",
@@ -19,6 +23,7 @@
   "throw ": "throw ",
   "throw error": "throw error",
   "toggle": "toggle",
+  "wrong login or password": "wrong login or password",
   "В": "В",
   "Ввведите ": "Ввведите ",
   "Ввведите username": "Ввведите username",
