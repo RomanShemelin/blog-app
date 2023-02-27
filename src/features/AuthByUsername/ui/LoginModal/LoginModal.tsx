@@ -1,8 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import type { PropsWithChildren } from 'react'
-import { LoginForm } from '../LoginForm/LoginForm'
+import { type PropsWithChildren, Suspense } from 'react'
 import { Modal } from 'shared/ui/Modal/Modal'
+import { LoginFormAsync } from '../LoginForm/LoginForm.async'
+import { Loader } from 'shared/ui/Loader/Loader'
 
 interface LoginModalProps {
   className?: string
@@ -22,7 +23,9 @@ export function LoginModal ({
       onClose={onClose}
       lazy
     >
-          <LoginForm />
+          <Suspense fallback={<Loader />}>
+              <LoginFormAsync />
+          </Suspense>
       </Modal>
   )
 }
