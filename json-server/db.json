@@ -25,5 +25,13 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { 
+    "firstname": "Roman",
+    "lastname": "Shemelin",
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint-Peterburg",
+    "username": "admin",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTRYkZkvTlVdXKLnBM6GAyt6eGJVMpS8vMag&usqp=CAU",
+   }
 }

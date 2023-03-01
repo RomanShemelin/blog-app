@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import type { PropsWithChildren } from 'react'
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from '../Button/Button'
 
@@ -9,10 +9,10 @@ interface LangSwitcherProps {
   short?: boolean
 }
 
-export function LangSwitcher ({
+export const LangSwitcher = memo(({
   className,
   short
-}: PropsWithChildren<LangSwitcherProps>) {
+}: LangSwitcherProps) => {
   const { t, i18n } = useTranslation()
 
   const toggle = () => {
@@ -28,4 +28,4 @@ export function LangSwitcher ({
           {t(short ? 'Короткий язык' : 'Язык')}
       </Button>
   )
-}
+})

@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Text.module.scss'
 
-import type { PropsWithChildren } from 'react'
+import { memo } from 'react'
 
 export enum TextTheme {
   PRIMARY = 'primary',
@@ -15,7 +15,7 @@ interface TextProps {
   theme?: TextTheme
 }
 
-export function Text (props: PropsWithChildren<TextProps>) {
+export const Text = memo((props: TextProps) => {
   const { className, title, text, theme = TextTheme.PRIMARY } = props
 
   return (
@@ -24,4 +24,4 @@ export function Text (props: PropsWithChildren<TextProps>) {
           {text && <p className={cls.text}>{text}</p>}
       </div>
   )
-}
+})
