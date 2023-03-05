@@ -49,36 +49,36 @@ const LoginForm = memo(
     }, [dispatch, username, password, onSuccess])
 
     return (
-        <DynamicModuleLoader
+      <DynamicModuleLoader
           reducers={initialReducers}
           removeAfterUnmount={true}>
-            <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('authorization form')}/>
-                {error && <Text text={t('wrong login or password')} theme={TextTheme.ERROR}/>}
-                <Input
+        <div className={classNames(cls.LoginForm, {}, [className])}>
+          <Text title={t('authorization form')}/>
+          {error && <Text text={t('wrong login or password')} theme={TextTheme.ERROR}/>}
+          <Input
                 type="text"
                 className={cls.input}
                 placeholder={t('Enter username')}
                 onChange={onChangeUsername}
                 value={username}
               />
-                <Input
+          <Input
                 type="text"
                 className={cls.input}
                 placeholder={t('Enter password')}
                 onChange={onChangePassword}
                 value={password}
               />
-                <Button
+          <Button
                 className={cls.loginBtn}
                 theme={ButtonTheme.OUTlINE}
                 // eslint-disable-next-line @typescript-eslint/no-misused-promises
                 onClick={onLoginClick}
                 disabled={isLoading}>
-                    {t('Enter')}
-                </Button>
-            </div>
-        </DynamicModuleLoader>
+            {t('Enter')}
+          </Button>
+        </div>
+      </DynamicModuleLoader>
 
     )
   }

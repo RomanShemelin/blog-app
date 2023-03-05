@@ -1,10 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './Modal.module.scss'
 
 import {
   type PropsWithChildren,
   type ReactNode, useEffect,
-  useRef, useState, useCallback
+  useRef, useState, useCallback, type MutableRefObject
 } from 'react'
 import { Portal } from '../Portal/Portal'
 import { useTheme } from 'app/providers/ThemeProvider'
@@ -24,7 +24,7 @@ export function Modal (props: PropsWithChildren<ModalProps>) {
 
   const [isClosing, setIsClosing] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
-  const timeRef = useRef<ReturnType<typeof setTimeout>>()
+  const timeRef = useRef() as MutableRefObject <ReturnType<typeof setTimeout>>
   const { theme } = useTheme()
 
   useEffect(() => {
@@ -63,21 +63,21 @@ export function Modal (props: PropsWithChildren<ModalProps>) {
     }
   }, [isOpen, onKeydown])
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing
   }
   if (lazy && !isMounted) { return null }
 
   return (
-      <Portal>
-          <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
-              <div className={cls.overlay} onClick={onCloseHandler}>
-                  <div
+    <Portal>
+      <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
+        <div className={cls.overlay} onClick={onCloseHandler}>
+          <div
                className={cls.content}
                onClick={onContentClick}>{children}</div>
-              </div>
-          </div>
-      </Portal>
+        </div>
+      </div>
+    </Portal>
   )
 }

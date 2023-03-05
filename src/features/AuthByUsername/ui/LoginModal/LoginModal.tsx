@@ -17,15 +17,15 @@ export function LoginModal ({
   onClose
 }: PropsWithChildren<LoginModalProps>) {
   return (
-      <Modal
+    <Modal
       className={classNames('', {}, [className])}
       isOpen={isOpen}
       onClose={onClose}
       lazy
     >
-          <Suspense fallback={<Loader />}>
-              <LoginFormAsync onSuccess={onClose}/>
-          </Suspense>
-      </Modal>
+      <Suspense fallback={<Loader />}>
+        <LoginFormAsync onSuccess={onClose}/>
+      </Suspense>
+    </Modal>
   )
 }

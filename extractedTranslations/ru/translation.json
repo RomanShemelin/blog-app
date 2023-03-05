@@ -2,6 +2,7 @@
   "": "",
   " username": " username",
   " пароль": " пароль",
+  "Edit": "Edit",
   "Enter": "Enter",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
@@ -12,7 +13,13 @@
   "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
     " ipsum?": " ipsum?"
   },
+  "Name": "Name",
   "PROFILE PAGE": "PROFILE PAGE",
+  "Profile": "Profile",
+  "Surname": "Surname",
+  "Y": "Y",
+  "You": "You",
+  "Your name": "Your name",
   "authorization form": "authorization form",
   "decrement": "decrement",
   "enter username": "enter username",

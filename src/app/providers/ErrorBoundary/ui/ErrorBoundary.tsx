@@ -35,7 +35,7 @@ class ErrorBoundary
     if (hasError) {
       // You can render any custom fallback UI
       return <Suspense fallback={''}>
-          <PageError/>
+        <PageError/>
       </Suspense>
     }
 

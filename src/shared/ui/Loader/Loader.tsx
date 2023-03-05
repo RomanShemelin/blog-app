@@ -11,11 +11,11 @@ export function Loader (props: PropsWithChildren<LoaderProps>) {
   const { className } = props
 
   return (
-      <div className={classNames('lds-ellipsis', {}, [className])}>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-      </div>
+    <div className={classNames('lds-ellipsis', {}, [className])}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   )
 }

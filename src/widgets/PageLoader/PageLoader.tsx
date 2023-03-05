@@ -12,8 +12,8 @@ export function PageLoader (props: PropsWithChildren<PageLoaderProps>) {
   const { className } = props
 
   return (
-      <div className={classNames(cls.PageLoader, {}, [className])}>
-          <Loader/>
-      </div>
+    <div className={classNames(cls.PageLoader, {}, [className])}>
+      <Loader/>
+    </div>
   )
 }

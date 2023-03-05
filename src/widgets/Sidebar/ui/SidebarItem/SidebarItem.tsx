@@ -7,7 +7,7 @@ import { type SidebarItemType } from 'widgets/Sidebar/model/items'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 interface SidebarItemProps {
-  item?: SidebarItemType
+  item: SidebarItemType
   collapsed: boolean
 }
 
@@ -16,13 +16,13 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
   const { t } = useTranslation()
 
   return (
-      <AppLink
+    <AppLink
       theme={AppLinkTheme.SECONDARY}
       to={item.path}
       className={classNames(cls.item, { [cls.collapsed]: collapsed })}
     >
-          <item.Icon className={cls.icon} />
-          <span className={cls.link}>{t(item.text)}</span>
-      </AppLink>
+      <item.Icon className={cls.icon} />
+      <span className={cls.link}>{t(item.text)}</span>
+    </AppLink>
   )
 })

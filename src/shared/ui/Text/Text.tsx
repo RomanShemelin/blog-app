@@ -19,9 +19,9 @@ export const Text = memo((props: TextProps) => {
   const { className, title, text, theme = TextTheme.PRIMARY } = props
 
   return (
-      <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
-          {title && <p className={cls.title}>{title}</p>}
-          {text && <p className={cls.text}>{text}</p>}
-      </div>
+    <div className={classNames(cls.Text, { [cls[theme]]: true }, [className])}>
+      {title && <p className={cls.title}>{title}</p>}
+      {text && <p className={cls.text}>{text}</p>}
+    </div>
   )
 })

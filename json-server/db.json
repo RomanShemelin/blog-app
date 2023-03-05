@@ -25,13 +25,13 @@
       "password": "123"
     }
   ],
-  "profile": { 
+  "profile": {
     "firstname": "Roman",
     "lastname": "Shemelin",
     "currency": "RUB",
     "country": "Russia",
     "city": "Saint-Peterburg",
     "username": "admin",
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTRYkZkvTlVdXKLnBM6GAyt6eGJVMpS8vMag&usqp=CAU",
-   }
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  }
 }

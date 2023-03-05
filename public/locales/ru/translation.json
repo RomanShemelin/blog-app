@@ -18,5 +18,10 @@
   "authorization form": "форма авторизации",
   "wrong login or password": "неверный логин или пароль",
   "Logout": "Выйти",
-  "PROFILE PAGE": "СТРАНИЦА ПРОФИЛЯ"
+  "PROFILE PAGE": "СТРАНИЦА ПРОФИЛЯ",
+  "Profile": "Профиль",
+  "Edit": "Редактировать",
+  "Your name": "Ваше имя",
+  "Name": "Имя",
+  "Surname": "Фамилия"
 }
