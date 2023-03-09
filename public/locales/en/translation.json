@@ -23,5 +23,18 @@
   "Edit": "Edit",
   "Your name": "Your name",
   "Name": "Name",
-  "Surname": "Surname"
+  "Surname": "Surname",
+  "an error occurred while loading the profile": "an error occurred while loading the profile",
+  "try refreshing the page": "try refreshing the page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "City": "City",
+  "Nickname": "Username",
+  "Username": "Username",
+  "Avatar": "Avatar",
+  "Choose currency": "Choose currency",
+  "Choose country": "Choose country",
+  "About": "About",
+  "Main page": "Main page",
+  "Enter text": "Enter text"
 }

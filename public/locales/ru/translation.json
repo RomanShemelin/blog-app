@@ -23,5 +23,17 @@
   "Edit": "Редактировать",
   "Your name": "Ваше имя",
   "Name": "Имя",
-  "Surname": "Фамилия"
+  "Surname": "Фамилия",
+  "an error occurred while loading the profile": "при загрузке профиля произошла ошибка",
+  "try refreshing the page": "попробуй обновить страницу",
+  "Cancel": "Отмена",
+  "Save": "Сохранить",
+  "Nickname": "Имя пользователя",
+  "Username": "Имя пользователя",
+  "Avatar": "Аватар",
+  "Choose currency": "Выберите Валюту",
+  "Choose country": "Выберите страну",
+  "About": "О",
+  "Main page": "Главная страница",
+  "Enter text": "Введите текст"
 }
