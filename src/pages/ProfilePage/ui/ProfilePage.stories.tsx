@@ -29,7 +29,7 @@ Normal.decorators = [StoreDecorator({
       lastname: 'Potov',
       country: Country.RUSSIA,
       city: 'Moscow',
-      currency: Currency.RUB,
+      currency: Currency.RUB
     }
   }
 })];
@@ -44,7 +44,7 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
       lastname: 'Potov',
       country: Country.RUSSIA,
       city: 'Moscow',
-      currency: Currency.RUB,
+      currency: Currency.RUB
     }
   }
 })];

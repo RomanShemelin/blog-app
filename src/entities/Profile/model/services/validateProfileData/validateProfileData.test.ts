@@ -25,7 +25,7 @@ describe('validateProfileData.test', () => {
     ])
   });
   test('without city', async () => {
-    const result = validateProfileData({ ...data, city:''});
+    const result = validateProfileData({ ...data, city: '' });
     expect(result).toEqual([
       ValidateProfileError.INCORRECT_CITY
     ])
