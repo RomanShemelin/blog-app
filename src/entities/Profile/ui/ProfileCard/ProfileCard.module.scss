@@ -8,16 +8,18 @@
 }
 
 .loading,
-.error{
+.error {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 300px;
 }
-.avatarWrapper{
+
+.avatarWrapper {
   display: flex;
   justify-content: center;
 }
-.editing{
+
+.editing {
   border: 3px solid var(--inverted-primary-color);
 }

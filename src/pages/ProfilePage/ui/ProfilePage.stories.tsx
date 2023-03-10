@@ -3,6 +3,8 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -19,8 +21,30 @@ const Template: ComponentStory<typeof ProfilePage> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
-Normal.decorators = [StoreDecorator({})];
+Normal.decorators = [StoreDecorator({
+  profile: {
+    form: {
+      username: 'admin',
+      firstname: 'Igor',
+      lastname: 'Potov',
+      country: Country.RUSSIA,
+      city: 'Moscow',
+      currency: Currency.RUB,
+    }
+  }
+})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
+  profile: {
+    form: {
+      username: 'admin',
+      firstname: 'Igor',
+      lastname: 'Potov',
+      country: Country.RUSSIA,
+      city: 'Moscow',
+      currency: Currency.RUB,
+    }
+  }
+})];

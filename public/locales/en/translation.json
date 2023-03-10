@@ -1,17 +1,11 @@
 {
-  "Тест": "Test",
-  "Перевод": "Translate",
-  "Главная страница": "Main page",
   "Язык": "English",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "An unexpected error has occurred",
   "throw error": "throw error",
   "toggle": "toggle",
-  "О сайте": "About us",
   "Короткий язык": "En",
-  "increment": "increment",
-  "decrement": "decrement",
   "Enter": "Enter",
   "Enter username": "Enter username",
   "Enter password": "Enter password",
@@ -36,5 +30,9 @@
   "Choose country": "Choose country",
   "About": "About",
   "Main page": "Main page",
-  "Enter text": "Enter text"
+  "Enter text": "Enter text",
+  "First and last name are required": "First and last name are required",
+  "Server error": "Server error",
+  "Enter city": "Enter city",
+  "No data provided": "No data provided"
 }

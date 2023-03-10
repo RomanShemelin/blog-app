@@ -18,4 +18,5 @@ export interface BuildOptions {
   isDev: boolean
   port: number
   apiUrl:string
+  project: 'stortybook' | 'frontend' | 'jest'
 }
