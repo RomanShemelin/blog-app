@@ -4,18 +4,18 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 import { type Article } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticlesDetailsPage from './ArticlesDetailsPage';
+import ArticleDetailsPage from './ArticleDetailsPage';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'pages/ArticleDetailsPage',
-  component: ArticlesDetailsPage,
+  component: ArticleDetailsPage,
   argTypes: {
     backgroundColor: { control: 'color' }
   }
-} as ComponentMeta<typeof ArticlesDetailsPage>;
+} as ComponentMeta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof ArticlesDetailsPage> = (args) => <ArticlesDetailsPage {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
 
 const article: Article = {
   id: '1',

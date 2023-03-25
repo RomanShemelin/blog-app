@@ -38,5 +38,7 @@
   "No data provided": "Данные не предоставлены",
   "Artice not founf": "Статья не найдена",
   "An error occurred while loading the article": "Произошла ошибка при загрузке статьи",
-  "Article not found": "Статья не найдена"
+  "Article not found": "Статья не найдена",
+  "Comments": "Комментарии",
+  "No comments": "Без комментариев"
 }
