@@ -1,8 +1,14 @@
 {
+  "": "",
   " username": " username",
   " пароль": " пароль",
   "About": "About",
+  "An error occurred while loading the article": "An error occurred while loading the article",
+  "Artic": "Artic",
+  "Artice not founf": "Artice not founf",
+  "Articl": "Articl",
   "Article Details Page": "Article Details Page",
+  "Article not found": "Article not found",
   "Articles Page": "Articles Page",
   "Avatar": "Avatar",
   "Cancel": "Cancel",
@@ -50,6 +56,10 @@
   "О сайте": "О сайте",
   "Обновить страницу": "Обновить страницу",
   "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка",
+  "Произошла ошибка при загрузке статьи": {
+    "": ""
+  },
+  "Статья не найдена": "Статья не найдена",
   "Страница не найдена": "Страница не найдена",
   "Язык": "Язык",
   "войти": "войти"

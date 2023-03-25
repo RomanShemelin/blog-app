@@ -2,7 +2,7 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 
-import { Text, TextTheme } from './Text'
+import { Text, TextSize, TextTheme } from './Text'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -37,3 +37,10 @@ onlyTextDark.args = {
   text: 'Exampe some test description ...'
 }
 onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const SizeL = Template.bind({})
+SizeL.args = {
+  title: 'Example title',
+  text: 'Exampe some test description ...',
+  size: TextSize.L
+}
