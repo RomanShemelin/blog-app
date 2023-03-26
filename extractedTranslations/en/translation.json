@@ -12,6 +12,7 @@
   "Article not found": "Article not found",
   "Articles Page": "Articles Page",
   "Avatar": "Avatar",
+  "Back to list of articles": "Back to list of articles",
   "Cancel": "Cancel",
   "Choose country": "",
   "Choose currency": "",
@@ -45,6 +46,20 @@
   "No data provided": "",
   "PROFILE PAGE": "PROFILE PAGE",
   "Profile": "Profile",
+  "Re": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Save": "Save",
   "Send": "Send",
   "Server error": "",
@@ -65,6 +80,7 @@
   "increment": "",
   "lorem20": "",
   "lorem20 ": "",
+  "read more": "",
   "t": "t",
   "thr": "thr",
   "throe": "throe",
@@ -96,6 +112,13 @@
   "Утеук": "Утеук",
   "Утеук username": "Утеук username",
   "Утеук пароль": "Утеук пароль",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Язык": "Язык",
   "войти": "войти"
 }
