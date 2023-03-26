@@ -1,10 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import { useCallback, useEffect } from 'react'
-import {
-  DynamicModuleLoader,
-  type ReducersList
-} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { type Country } from 'entities/Country'
+import { type Currency } from 'entities/Currency'
 import {
   fetchProfileData,
   getProfileError,
@@ -17,13 +14,18 @@ import {
   profileReducer,
   ValidateProfileError
 } from 'entities/Profile'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useSelector } from 'react-redux'
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
-import { type Currency } from 'entities/Currency'
-import { type Country } from 'entities/Country'
-import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import {
+  DynamicModuleLoader,
+  type ReducersList
+} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -41,6 +43,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   const error = useSelector(getProfileError)
   const readonly = useSelector(getProfileReadonly)
   const validateProfileErrors = useSelector(getProfileValidateErrors)
+  const { id } = useParams<{ id: string }>()
 
   const validateTranslateErrors = {
     [ValidateProfileError.SERVER_ERROR]: t('Server error'),
@@ -48,12 +51,11 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     [ValidateProfileError.INCORRECT_CITY]: t('Enter city'),
     [ValidateProfileError.NO_DATA]: t('No data provided')
   }
-
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData())
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id))
     }
-  }, [dispatch])
+  })
 
   const onChangeFirstname = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({ firstname: value || '' }))
