@@ -4,17 +4,16 @@ import {
   type Reducer,
   type ReducersMapObject
 } from '@reduxjs/toolkit'
-import { type CombinedState } from 'redux'
 import { type AxiosInstance } from 'axios'
+import { type ArticleDetailsSchema } from 'entities/Article'
 import { type CounterSchema } from 'entities/Counter'
 import { type ProfileSchema } from 'entities/Profile'
 import { type UserSchema } from 'entities/User'
-import { type LoginSchema } from 'features/AuthByUsername'
-import { type NavigateOptions, type To } from 'react-router-dom'
-import { type ArticleDetailsSchema } from 'entities/Article'
-import { type ArticleDetailsCommentsSchema } from 'pages/ArticlesDetailsPage'
 import { type AddCommnetFormSchema } from 'features/addCommentForm'
+import { type LoginSchema } from 'features/AuthByUsername'
+import { type ArticleDetailsCommentsSchema } from 'pages/ArticlesDetailsPage'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
+import { type CombinedState } from 'redux'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -42,7 +41,6 @@ export interface reduxStoreWithManager extends EnhancedStore<StateSchema> {
 }
 export interface ThunkExtraApg {
   api: AxiosInstance
-  navigate?: (to: To, options?: NavigateOptions) => void
 }
 
 export interface ThunkConfig<T> {

@@ -1,6 +1,6 @@
 import { ArticleList, ArticleViewSelector, type ArticleView } from 'entities/Article';
-import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
+import { initArticlesPage } from 'pages/ArticlesPage/model/services/initArticlesPage/initArticlesPage';
 import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -32,8 +32,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }, [dispatch])
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(fetchArticlesList({ page: 1 }))
+    dispatch(initArticlesPage())
   })
 
   const onChangeView = useCallback((view: ArticleView) => {
@@ -41,7 +40,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }, [dispatch])
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlesPage, {}, [className])}>
         <ArticleViewSelector view={view} onViewClick={onChangeView}/>
         <ArticleList isLoading={isLoading} view={view} articles={articles} />

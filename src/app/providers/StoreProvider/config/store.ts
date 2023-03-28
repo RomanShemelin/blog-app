@@ -1,20 +1,16 @@
 import {
-  type CombinedState,
-  configureStore,
-  type Reducer,
+  configureStore, type CombinedState, type Reducer,
   type ReducersMapObject
 } from '@reduxjs/toolkit'
 import { counterReducer } from 'entities/Counter'
 import { userReducer } from 'entities/User'
-import { type NavigateOptions, type To } from 'react-router-dom'
 import { $api } from 'shared/api/api'
 import { createReducerManager } from './reducerManager'
-import { type ThunkExtraApg, type StateSchema } from './StateSchema'
+import { type StateSchema, type ThunkExtraApg } from './StateSchema'
 
 export function createReduxStore (
   initialState?: StateSchema,
-  asyncReducers?: ReducersMapObject<StateSchema>,
-  navigate?: (to: To, options?: NavigateOptions) => void
+  asyncReducers?: ReducersMapObject<StateSchema>
 ) {
   const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
@@ -24,8 +20,7 @@ export function createReduxStore (
 
   const reducerManager = createReducerManager(rootReducer)
   const extraArg: ThunkExtraApg = {
-    api: $api,
-    navigate
+    api: $api
   }
   const store = configureStore({
     reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,

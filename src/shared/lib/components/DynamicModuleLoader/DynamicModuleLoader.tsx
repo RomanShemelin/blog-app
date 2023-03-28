@@ -17,10 +17,16 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
   const { children, reducers, removeAfterUnmount = true } = props
   const store = useStore() as reduxStoreWithManager
   const dispatch = useDispatch()
+
   useEffect(() => {
+    const mountedReducers = store.reducerManager.getReducerMap();
     Object.entries(reducers).forEach(([name, reducer]) => {
-      store.reducerManager.add(name as StateSchemaKey, reducer)
-      dispatch({ type: `@INIT ${name}` })
+      const mounted = mountedReducers[name as StateSchemaKey]
+      // добавляем новый редьюсер только если его нет
+      if (!mounted) {
+        store.reducerManager.add(name as StateSchemaKey, reducer)
+        dispatch({ type: `@INIT ${name}` })
+      }
     })
     return () => {
       if (removeAfterUnmount) {
