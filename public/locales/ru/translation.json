@@ -45,5 +45,15 @@
   "Send": "Отправлять",
   "read more": "читать далее",
   "Read more": "Читать далее...",
-  "Back to list of articles": "Вернуться к списку статей"
+  "Back to list of articles": "Вернуться к списку статей",
+  "Sort": "Сортировать",
+  "Search": "Поиск",
+  "Ascending": "По возрастанию",
+  "Descending": "По убыванию",
+  "Creation date": "Дата создания",
+  "Views": "Просмотры",
+  "IT": "Айти",
+  "ALL": "ВСЕ",
+  "ECONOMICS": "ЭКОНОМИКА",
+  "SCIENCE": "НАУКА"
 }

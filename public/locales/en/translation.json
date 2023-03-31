@@ -44,5 +44,15 @@
   "Send": "Send",
   "read more": "read more",
   "Read more": "Read more...",
-  "Back to list of articles": "Back to list of articles"
+  "Back to list of articles": "Back to list of articles",
+  "Sort": "Sort",
+  "Search": "Search",
+  "Ascending": "Ascending",
+  "Descending": "Descending",
+  "Creation date": "Creation date",
+  "Views": "Views",
+  "IT": "IT",
+  "ALL": "ALL",
+  "ECONOMICS": "ECONOMICS",
+  "SCIENCE": "SCIENCE"
 }
