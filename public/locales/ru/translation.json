@@ -56,5 +56,9 @@
   "ALL": "ВСЕ",
   "ECONOMICS": "ЭКОНОМИКА",
   "SCIENCE": "НАУКА",
-  "Recomend": "Рекомендовать"
+  "Recomend": "Рекомендовать",
+  "Edit article with ID": "Редактировать статью с идентификатором",
+  "Create new article": "Создать новую статью",
+  "Blog app": "Приложение для блога",
+  "Create article": "Создать статью"
 }

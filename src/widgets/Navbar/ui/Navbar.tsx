@@ -1,35 +1,46 @@
-import { getUserAuthData, userActions } from 'entities/User'
-import { LoginModal } from 'features/AuthByUsername'
-import { memo, useCallback, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useDispatch, useSelector } from 'react-redux'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import cls from './Navbar.module.scss'
+import { getUserAuthData, userActions } from 'entities/User';
+import { LoginModal } from 'features/AuthByUsername';
+import { memo, useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
   className?: string
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
-  const { t } = useTranslation()
-  const [isAuthModal, setIsAuthModal] = useState(false)
-  const authData = useSelector(getUserAuthData)
-  const dispatch = useDispatch()
+  const { t } = useTranslation();
+  const [isAuthModal, setIsAuthModal] = useState(false);
+  const authData = useSelector(getUserAuthData);
+  const dispatch = useDispatch();
 
   const onCloseModal = useCallback(() => {
-    setIsAuthModal(false)
-  }, [])
+    setIsAuthModal(false);
+  }, []);
   const onShowModal = useCallback(() => {
-    setIsAuthModal(true)
-  }, [])
+    setIsAuthModal(true);
+  }, []);
   const onLogout = useCallback(() => {
-    dispatch(userActions.logout())
-  }, [dispatch])
+    dispatch(userActions.logout());
+  }, [dispatch]);
 
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
+        <Text
+          className={cls.appName}
+          title={t('Blog app')}
+          theme={TextTheme.INVERTED}
+        />
+        <AppLink to={RoutePath.articles_create} theme={AppLinkTheme.SECONDARY} className={cls.createBtn}>
+          {t('Create article')}
+        </AppLink>
         <Button
           theme={ButtonTheme.CLEAR_INVERTED}
           className={cls.links}
@@ -38,7 +49,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           {t('Logout')}
         </Button>
       </header>
-    )
+    );
   }
   return (
     <header className={classNames(cls.Navbar, {}, [className])}>
@@ -50,8 +61,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         {t('Enter')}
       </Button>
       {isAuthModal && (
-      <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
+        <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       )}
     </header>
-  )
-})
+  );
+});
