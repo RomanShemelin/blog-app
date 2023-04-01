@@ -6,16 +6,18 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleLIstItemSkeleton';
 import { t } from 'i18next';
 import { Text, TextSize } from 'shared/ui/Text/Text';
+import { type HTMLAttributeAnchorTarget } from 'react';
 
 interface ArticleListProps {
   className?: string
   articles: Article[]
   isLoading?: boolean
   view?: ArticleView
+  target?: HTMLAttributeAnchorTarget
 }
 
 export function ArticleList (props: ArticleListProps) {
-  const { className, articles, isLoading, view = ArticleView.SMALL } = props;
+  const { className, articles, isLoading, view = ArticleView.SMALL, target } = props;
 
   const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
     .fill(0)
@@ -24,7 +26,12 @@ export function ArticleList (props: ArticleListProps) {
     ));
 
   const renderArticle = (article: Article) => (
-    <ArticleListItem article={article} view={view} key={article.id} className={cls.card}/>
+    <ArticleListItem
+      article={article}
+      view={view}
+      key={article.id}
+      className={cls.card}
+      target={target}/>
   )
   if (!isLoading && !articles.length) {
     return (

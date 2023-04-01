@@ -1,18 +1,18 @@
 import { type Story } from '@storybook/react'
-import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider'
-import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice'
-import { profileReducer } from 'entities/Profile'
-import { type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import { StoreProvider, type StateSchema } from 'app/providers/StoreProvider'
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice'
+import { profileReducer } from 'entities/Profile'
 import { addCommentFormReducers } from 'features/addCommentForm/model/slices/addCommentFormSlice'
-import { articleDetailsCommentsReducer } from 'pages/ArticlesDetailsPage/model/slices/articleDetailsCommentsSlice'
+import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice'
+import { articleDetailsPageReducer } from 'pages/ArticlesDetailsPage/model/slices'
+import { type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducers,
-  articleDetailComments: articleDetailsCommentsReducer
+  articlesDetailsPage: articleDetailsPageReducer
 }
 
 // eslint-disable-next-line react/display-name

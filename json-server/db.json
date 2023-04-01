@@ -553,6 +553,12 @@
       "userId": "2",
       "text": "hello world",
       "id": "ht6d4D0"
+    },
+    {
+      "articleId": "7",
+      "userId": "2",
+      "text": "test",
+      "id": "J9epAt0"
     }
   ],
   "users": [
