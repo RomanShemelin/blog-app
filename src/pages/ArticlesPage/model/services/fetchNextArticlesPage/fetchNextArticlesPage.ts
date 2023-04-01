@@ -5,7 +5,7 @@ import {
   getArticlesPageHasMore,
   getArticlesPageNum
 } from '../../selectors/articlesPageSelectors';
-import { articlesPageActions } from '../../slices/ArticlesPageSlice';
+import { articlesPageActions } from '../../slices/articlesPageSlice';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 
 export interface FetchArticleListProps {

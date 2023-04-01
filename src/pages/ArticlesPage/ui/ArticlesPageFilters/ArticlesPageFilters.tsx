@@ -25,7 +25,7 @@ import {
   getArticlesPageType,
   getArticlesView
 } from '../../model/selectors/articlesPageSelectors';
-import { articlesPageActions } from '../../model/slices/ArticlesPageSlice';
+import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 
 interface ArticlesPageFiltersProps {
   className?: string
