@@ -15,7 +15,7 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'fsd-check-path'],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/function-component-definition': 'off',
@@ -37,6 +37,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/display-name': 'off',
+    'fsd-check-path/path-checker': 'error'
   },
   globals: {
     __IS_DEV__: true,

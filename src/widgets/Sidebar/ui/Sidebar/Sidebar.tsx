@@ -5,7 +5,7 @@ import { memo, useMemo, useState, type PropsWithChildren } from 'react'
 import { useSelector } from 'react-redux'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher'
-import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { getSideBarItems } from '../../model/selectors/getSideBarItems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
 

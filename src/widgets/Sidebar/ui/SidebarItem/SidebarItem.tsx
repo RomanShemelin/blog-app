@@ -5,7 +5,8 @@ import { memo } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import { type SidebarItemType } from 'widgets/Sidebar/model/types/sidebar'
+import { type SidebarItemType } from '../../model/types/sidebar'
+import { useTranslation } from 'react-i18next'
 
 interface SidebarItemProps {
   item: SidebarItemType
@@ -15,6 +16,7 @@ interface SidebarItemProps {
 export const SidebarItem = memo((props: SidebarItemProps) => {
   const { item, collapsed } = props
   const isAuth = useSelector(getUserAuthData)
+  const { t } = useTranslation()
 
   if (item.authOnly && !isAuth) {
     return null
@@ -27,7 +29,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
       className={classNames(cls.item, { [cls.collapsed]: collapsed })}
     >
       <item.Icon className={cls.icon} />
-      <span className={cls.link}>{item.text}</span>
+      <span className={cls.link}>{t(item.text)}</span>
     </AppLink>
   )
 })

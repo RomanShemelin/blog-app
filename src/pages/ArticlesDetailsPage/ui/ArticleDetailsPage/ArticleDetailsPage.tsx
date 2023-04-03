@@ -10,7 +10,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { Text, TextSize } from 'shared/ui/Text/Text';
 
 import AddCommentForm from 'features/addCommentForm/ui/AddCommentForm/AddCommentForm';
-import { articleDetailsPageReducer } from 'pages/ArticlesDetailsPage/model/slices';
+import { articleDetailsPageReducer } from '../../model/slices';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Page } from 'widgets/Page/Page';
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments';

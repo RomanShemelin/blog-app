@@ -3,7 +3,7 @@ import cls from './CommentList.module.scss';
 
 import type { PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next'
-import { type Comment } from 'entities/Comment/model/types/comment';
+import { type Comment } from '../../model/types/comment';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Text } from 'shared/ui/Text/Text';
 
