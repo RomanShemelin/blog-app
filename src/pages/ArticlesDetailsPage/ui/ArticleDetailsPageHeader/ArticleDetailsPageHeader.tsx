@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleDetailsPageHeader.module.scss';
 
 import { getArticleDetailsData } from 'entities/Article/model/selectors/articleDetails';
 import { getUserAuthData } from 'entities/User';
@@ -9,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button } from 'shared/ui/Button/Button';
+import { HStack } from 'shared/ui/Stack';
 
 interface ArticleDetailsPageHeaderProps {
   className?: string
@@ -32,9 +32,9 @@ export function ArticleDetailsPageHeader (
   }, [article?.id, navigate]);
 
   return (
-    <div className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
+    <HStack max justify="between" className={classNames('', {}, [className])}>
       <Button onClick={onBackToList}>{t('Back to list of articles')}</Button>
-      {canEdit && <Button className={cls.editBtn} onClick={onEditArticle}>{t('Edit')}</Button>}
-    </div>
+      {canEdit && <Button onClick={onEditArticle}>{t('Edit')}</Button>}
+    </HStack>
   );
 }

@@ -11,6 +11,7 @@ import { type Currency } from 'entities/Currency/model/types/currency';
 import { CurrencySelect } from 'entities/Currency';
 import { type Country } from 'entities/Country/model/types/country';
 import { CountrySelect } from 'entities/Country';
+import { HStack, VStack } from 'shared/ui/Stack';
 
 interface ProfileCardProps {
   className?: string
@@ -53,14 +54,14 @@ export function ProfileCard ({
   }
   if (error) {
     return (
-      <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
         <Text
           theme={TextTheme.ERROR}
           title={t('an error occurred while loading the profile')}
           text={t('try refreshing the page')}
           align={TextAlign.CENTER}
           />
-      </div>
+      </HStack>
     )
   }
 
@@ -70,62 +71,58 @@ export function ProfileCard ({
   }
 
   return (
-    <div className={classNames(cls.ProfileCard, mods, [className])}>
-      <div className={cls.header}>
-      </div>
-      <div className={cls.data}>
-        {data?.avatar && <div className={cls.avatarWrapper}>
-          <Avatar src={data?.avatar}/>
-        </div>
+    <VStack max gap="16" className={classNames(cls.ProfileCard, mods, [className])}>
+      {data?.avatar && <HStack justify="center" max className={cls.avatarWrapper}>
+        <Avatar src={data?.avatar}/>
+        </HStack>
        }
-        <Input
+      <Input
           value={data?.firstname}
           placeholder={t('Name')}
           className={cls.input}
           onChange={onChangeFirstname}
           readonly={readonly}
         />
-        <Input
+      <Input
           value={data?.lastname}
           placeholder={t('Surname')}
           className={cls.input}
           onChange={onChangeLastname}
           readonly={readonly}
         />
-        <Input
+      <Input
           value={data?.city}
           placeholder={t('City')}
           className={cls.input}
           onChange={onChangeCity}
           readonly={readonly}
         />
-        <Input
+      <Input
           value={data?.username}
           placeholder={t('Username')}
           className={cls.input}
           onChange={onChangeUsername}
           readonly={readonly}
         />
-        <Input
+      <Input
           value={data?.avatar}
           placeholder={t('Avatar')}
           className={cls.input}
           onChange={onChangeAvatar}
           readonly={readonly}
         />
-        <CurrencySelect
+      <CurrencySelect
           className={cls.input}
           value={data?.currency}
           onChange={onChangeCurrency}
           readonly={readonly}
         />
-        <CountrySelect
+      <CountrySelect
           className={cls.input}
           value={data?.country}
           onChange={onChangeCountry}
           readonly={readonly}
         />
-      </div>
-    </div>
+    </VStack>
   );
 }

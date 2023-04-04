@@ -27,6 +27,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Page } from 'widgets/Page/Page'
+import { VStack } from 'shared/ui/Stack/VStack/Vstack'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -89,11 +90,12 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames('', {}, [className])}>
-        <ProfilePageHeader/>
-        {validateProfileErrors?.length && validateProfileErrors.map(error => (
-          <Text theme={TextTheme.ERROR} text={validateTranslateErrors[error]} key={error}/>
-        ))}
-        <ProfileCard
+        <VStack max gap="16">
+          <ProfilePageHeader/>
+          {validateProfileErrors?.length && validateProfileErrors.map(error => (
+            <Text theme={TextTheme.ERROR} text={validateTranslateErrors[error]} key={error}/>
+          ))}
+          <ProfileCard
           data={formData}
           isLoading={isLoading}
           error={error}
@@ -106,6 +108,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
           />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   )
