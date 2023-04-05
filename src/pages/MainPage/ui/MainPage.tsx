@@ -1,12 +1,15 @@
 import { useTranslation } from 'react-i18next'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
+import { Page } from 'widgets/Page/Page'
 
 const MainPage = () => {
   const { t } = useTranslation()
 
   return (
-    <div>
+    <Page>
       {t('Main page')}
-    </div>
+      <ListBox/>
+    </Page>
   )
 }
 

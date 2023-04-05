@@ -27,7 +27,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import { Page } from 'widgets/Page/Page'
-import { VStack } from 'shared/ui/Stack/VStack/Vstack'
+import { VStack } from 'shared/ui/Stack/VStack/VStack'
 
 const reducers: ReducersList = {
   profile: profileReducer

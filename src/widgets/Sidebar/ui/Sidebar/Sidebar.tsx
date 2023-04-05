@@ -8,7 +8,7 @@ import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { getSideBarItems } from '../../model/selectors/getSideBarItems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
-import { VStack } from 'shared/ui/Stack/VStack/Vstack'
+import { VStack } from 'shared/ui/Stack/VStack/VStack'
 
 interface SidebarProps {
   className?: string
