@@ -47,16 +47,28 @@ export function EditableProfileCardHeader (
         <>
           {readonly
             ? (
-              <Button theme={ButtonTheme.OUTlINE} onClick={onEdit}>
+              <Button
+                theme={ButtonTheme.OUTlINE}
+                onClick={onEdit}
+                data-testid={'EditableProfileCardHeader.EditButton'}
+              >
                 {t('Edit')}
               </Button>
               )
             : (
               <HStack gap='8'>
-                <Button theme={ButtonTheme.OUTlINE_RED} onClick={onCancelEdit}>
+                <Button
+                  theme={ButtonTheme.OUTlINE_RED}
+                  onClick={onCancelEdit}
+                  data-testid={'EditableProfileCardHeader.CancelButton'}
+                >
                   {t('Cancel')}
                 </Button>
-                <Button theme={ButtonTheme.OUTlINE} onClick={onSave}>
+                <Button
+                  theme={ButtonTheme.OUTlINE}
+                  onClick={onSave}
+                  data-testid={'EditableProfileCardHeader.SaveButton'}
+                 >
                   {t('Save')}
                 </Button>
               </HStack>

@@ -82,6 +82,7 @@ export function ProfileCard ({
           className={cls.input}
           onChange={onChangeFirstname}
           readonly={readonly}
+          data-testid={'ProfileCard.firstname'}
         />
       <Input
           value={data?.lastname}
@@ -89,6 +90,7 @@ export function ProfileCard ({
           className={cls.input}
           onChange={onChangeLastname}
           readonly={readonly}
+          data-testid={'ProfileCard.lastname'}
         />
       <Input
           value={data?.city}
@@ -96,6 +98,7 @@ export function ProfileCard ({
           className={cls.input}
           onChange={onChangeCity}
           readonly={readonly}
+          data-testid={'ProfileCard.city'}
         />
       <Input
           value={data?.username}
@@ -103,6 +106,7 @@ export function ProfileCard ({
           className={cls.input}
           onChange={onChangeUsername}
           readonly={readonly}
+          data-testid={'ProfileCard.username'}
         />
       <Input
           value={data?.avatar}
@@ -110,18 +114,21 @@ export function ProfileCard ({
           className={cls.input}
           onChange={onChangeAvatar}
           readonly={readonly}
+          data-testid={'ProfileCard.avatar'}
         />
       <CurrencySelect
           className={cls.input}
           value={data?.currency}
           onChange={onChangeCurrency}
           readonly={readonly}
+          data-testid={'ProfileCard.currency'}
         />
       <CountrySelect
           className={cls.input}
           value={data?.country}
           onChange={onChangeCountry}
           readonly={readonly}
+          data-testid={'ProfileCard.country'}
         />
     </VStack>
   );
