@@ -41,6 +41,7 @@
   "Enter the city": "",
   "Enter username": "Enter username",
   "Enter пароль": "Enter пароль",
+  "Error on load articles": "Error on load articles",
   "First and last name are required": "",
   "IT": "",
   "L": "",
@@ -61,6 +62,7 @@
   "No data provided": "",
   "PROFILE PAGE": "PROFILE PAGE",
   "Profile": "Profile",
+  "Profile not found": "Profile not found",
   "Re": {
     "": {
       "": {

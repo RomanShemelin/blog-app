@@ -1,27 +1,29 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-
-import { type PropsWithChildren, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
-import { useSelector } from 'react-redux';
-import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUserAuthData } from 'entities/User';
-import { HStack } from 'shared/ui/Stack/HStack/HStack';
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { HStack } from 'shared/ui/Stack';
+import { Text } from 'shared/ui/Text/Text';
+import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
+import { profileActions } from '../../model/slice/profileSlice';
 
-interface ProfilePageHeaderProps {
+interface EditableProfileCardHeaderProps {
   className?: string
 }
 
-export function ProfilePageHeader (
-  props: PropsWithChildren<ProfilePageHeaderProps>
+export function EditableProfileCardHeader (
+  props: EditableProfileCardHeaderProps
 ) {
   const { className } = props;
   const { t } = useTranslation();
-  const authData = useSelector(getUserAuthData)
-  const profileData = useSelector(getProfileData)
-  const canEdit = authData?.id === profileData?.id
+  const authData = useSelector(getUserAuthData);
+  const profileData = useSelector(getProfileData);
+  const canEdit = authData?.id === profileData?.id;
 
   const readonly = useSelector(getProfileReadonly);
   const dispatch = useAppDispatch();
@@ -39,7 +41,7 @@ export function ProfilePageHeader (
   }, [dispatch]);
 
   return (
-    <HStack max justify="between" className={classNames('', {}, [className])}>
+    <HStack max justify='between' className={classNames('', {}, [className])}>
       <Text title={t('Profile')} />
       {canEdit && (
         <>
@@ -50,17 +52,16 @@ export function ProfilePageHeader (
               </Button>
               )
             : (
-              <HStack gap="8">
+              <HStack gap='8'>
                 <Button theme={ButtonTheme.OUTlINE_RED} onClick={onCancelEdit}>
                   {t('Cancel')}
                 </Button>
                 <Button theme={ButtonTheme.OUTlINE} onClick={onSave}>
                   {t('Save')}
                 </Button>
-
               </HStack>
               )}
-          </>
+        </>
       )}
     </HStack>
   );

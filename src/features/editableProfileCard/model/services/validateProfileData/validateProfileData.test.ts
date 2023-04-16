@@ -1,6 +1,6 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { ValidateProfileError } from '../../types/profile';
+import { ValidateProfileError } from '../../types/editableProfileCardSchema';
 import { validateProfileData } from './validateProfileData';
 
 const data = {
@@ -10,31 +10,31 @@ const data = {
   country: Country.RUSSIA,
   city: 'Moscow',
   currency: Currency.RUB
-}
+};
 
 describe('validateProfileData.test', () => {
   test('succes', async () => {
-    const result = validateProfileData(data)
+    const result = validateProfileData(data);
 
-    expect(result).toEqual([])
+    expect(result).toEqual([]);
   });
   test('without firstname and lastname', async () => {
-    const result = validateProfileData({ ...data, firstname: '', lastname: '' });
-    expect(result).toEqual([
-      ValidateProfileError.INCORRECT_USER_DATA
-    ])
+    const result = validateProfileData({
+      ...data,
+      firstname: '',
+      lastname: ''
+    });
+    expect(result).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
   });
   test('without city', async () => {
     const result = validateProfileData({ ...data, city: '' });
-    expect(result).toEqual([
-      ValidateProfileError.INCORRECT_CITY
-    ])
+    expect(result).toEqual([ValidateProfileError.INCORRECT_CITY]);
   });
   test('incorrect all', async () => {
     const result = validateProfileData({});
     expect(result).toEqual([
       ValidateProfileError.INCORRECT_USER_DATA,
       ValidateProfileError.INCORRECT_CITY
-    ])
+    ]);
   });
 });

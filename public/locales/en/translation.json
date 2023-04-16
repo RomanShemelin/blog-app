@@ -60,8 +60,10 @@
   "Create new article": "Create new article",
   "Blog app": "Blog app",
   "Create article": "Create article",
-  "Главная":"Main",
+  "Главная": "Main",
   "О сайте": "About",
   "Профиль": "Profile",
-  "Статьи": "Articles"
+  "Статьи": "Articles",
+  "Error on load articles": "Error on load articles",
+  "Profile not found": "Profile not found"
 }

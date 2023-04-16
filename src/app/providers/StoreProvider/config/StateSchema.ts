@@ -7,21 +7,23 @@ import {
 import { type AxiosInstance } from 'axios'
 import { type ArticleDetailsSchema } from 'entities/Article'
 import { type CounterSchema } from 'entities/Counter'
-import { type ProfileSchema } from 'entities/Profile'
 import { type UserSchema } from 'entities/User'
 import { type AddCommnetFormSchema } from 'features/addCommentForm'
 import { type LoginSchema } from 'features/AuthByUsername'
+import { type ProfileSchema } from 'features/editableProfileCard'
 import { type ScrollSaveSchema } from 'features/ScrollSave'
 import {
   type ArticleDetailsPageSchema
 } from 'pages/ArticlesDetailsPage'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 import { type CombinedState } from 'redux'
+import { type rtkApi } from 'shared/api/rtkApi'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
   scrollsave: ScrollSaveSchema
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
   // асинхронные редюсеры
   loginForm?: LoginSchema
