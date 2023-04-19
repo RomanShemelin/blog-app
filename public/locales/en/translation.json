@@ -65,5 +65,7 @@
   "Профиль": "Profile",
   "Статьи": "Articles",
   "Error on load articles": "Error on load articles",
-  "Profile not found": "Profile not found"
+  "Profile not found": "Profile not found",
+  "Admin panel": "Admin panel",
+  "Access to this page is closed": "Access to this page is closed"
 }

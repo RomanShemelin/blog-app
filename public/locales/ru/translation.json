@@ -66,5 +66,7 @@
   "Профиль": "Профиль",
   "Статьи": "Статьи",
   "Error on load articles": "Ошибка при загрузке статей",
-  "Profile not found": "Профиль не найден"
+  "Profile not found": "Профиль не найден",
+  "Admin panel": "Панель администратора",
+  "Access to this page is closed": "Доступ к этой странице закрыт"
 }

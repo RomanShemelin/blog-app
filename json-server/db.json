@@ -566,13 +566,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
+      "roles": ["ADMIN"],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-kcF8vYQ0gRpEfdrWBSljJof6uOahQlKnw&usqp=CAU"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDbZ-wKLY24CLmjASafU4dTiw2hZZ2c_NJQ&usqp=CAU"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDbZ-wKLY24CLmjASafU4dTiw2hZZ2c_NJQ&usqp=CAU"
     }
   ],
