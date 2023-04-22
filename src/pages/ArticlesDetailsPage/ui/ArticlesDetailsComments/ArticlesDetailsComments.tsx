@@ -14,10 +14,11 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import {
   fetchCommentsByArticleId
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
+import { VStack } from 'shared/ui/Stack';
 
 interface ArticlesDetailsCommentsProps {
   className?: string
-  id: string
+  id?: string
 }
 
 export function ArticlesDetailsComments (props: ArticlesDetailsCommentsProps) {
@@ -39,13 +40,13 @@ export function ArticlesDetailsComments (props: ArticlesDetailsCommentsProps) {
   });
 
   return (
-    <div className={classNames('', {}, [className])}>
+    <VStack gap="16" max className={classNames('', {}, [className])}>
       <Text
         size={TextSize.L}
         title={t('Comments')}
       />
       <AddCommentForm onSendComment={onSendComment} />
       <CommentList isLoading={commentsIsLoading} comments={comments} />
-    </div>
+    </VStack>
   );
 }

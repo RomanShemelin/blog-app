@@ -4,6 +4,7 @@ export function useThrottle (callback: (...args: any[]) => void, delay: number) 
   const throttleRef = useRef(false);
 
   return useCallback(
+    // @ts-expect-error ignore
     (...args) => {
       if (!throttleRef.current) {
         // eslint-disable-next-line n/no-callback-literal

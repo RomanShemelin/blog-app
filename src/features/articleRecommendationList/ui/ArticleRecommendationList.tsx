@@ -22,7 +22,7 @@ export function ArticleRecommendationList (
   }
 
   return (
-    <VStack gap='8' className={classNames('', {}, [className])}>
+    <VStack gap='8' max className={classNames('', {}, [className])}>
       <Text size={TextSize.L} title={t('Recomend')} />
       <ArticleList articles={articles} target={'_blank'} />
     </VStack>

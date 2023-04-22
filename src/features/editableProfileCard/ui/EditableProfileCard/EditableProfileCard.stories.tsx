@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { EditableProfileCard } from './EditableProfileCard';
 
@@ -17,3 +18,4 @@ const Template: ComponentStory<typeof EditableProfileCard> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})]
