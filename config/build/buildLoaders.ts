@@ -10,7 +10,9 @@ export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
     use: ['@svgr/webpack']
   }
 
-  const babelLoader = buildBabelLoader(options)
+  const codeBabelLoader = buildBabelLoader({...options, isTSX: false})
+  const tsxCodeBabelLoader = buildBabelLoader({...options, isTSX: true})
+
   const cssLoader = buildCssLoader(isDev)
 
   const typescriptLoader = {
@@ -28,5 +30,11 @@ export function buildLoaders (options: BuildOptions): webpack.RuleSetRule[] {
     ]
   }
 
-  return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader]
+  return [
+    fileLoader, 
+    svgLoader, 
+    codeBabelLoader,
+    tsxCodeBabelLoader, 
+    // typescriptLoader,
+    cssLoader]
 }
