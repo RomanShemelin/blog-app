@@ -3,12 +3,12 @@ import cls from './ArticlesPageFilters.module.scss';
 
 import {
   ArticleSortSelector,
+  type ArticleType,
   ArticleTypeTabs,
   ArticleViewSelector,
   type ArticleSortField,
   type ArticleView
 } from 'entities/Article';
-import { type ArticleType } from 'entities/Article/model/types/article';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';

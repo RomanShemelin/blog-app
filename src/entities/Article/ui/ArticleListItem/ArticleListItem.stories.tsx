@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
+import { ArticleView } from '../../model/consts/articleConsts';
 
-import { ArticleView, type Article } from '../../model/types/article';
+import { type Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
 
 export default {

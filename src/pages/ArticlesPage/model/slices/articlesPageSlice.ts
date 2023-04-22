@@ -5,8 +5,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { type StateSchema } from 'app/providers/StoreProvider';
-import { ArticleView, type Article } from 'entities/Article';
-import { ArticleSortField, ArticleType } from 'entities/Article/model/types/article';
+import { ArticleSortField, ArticleType, ArticleView, type Article } from 'entities/Article';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { type SortOrder } from 'shared/types';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';

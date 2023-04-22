@@ -1,11 +1,5 @@
 import { type Profile } from 'entities/Profile';
-
-export enum ValidateProfileError {
-  INCORRECT_USER_DATA = 'INCORRECT_USER_DATA ',
-  INCORRECT_CITY = 'INCORRECT_CITY',
-  NO_DATA = 'NO_DATA',
-  SERVER_ERROR = 'SERVER_ERROR'
-}
+import { type ValidateProfileError } from '../consts/consts';
 
 export interface ProfileSchema {
   data?: Profile

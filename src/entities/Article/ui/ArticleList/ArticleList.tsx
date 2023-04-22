@@ -1,12 +1,13 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleList.module.scss';
 
-import { ArticleView, type Article } from '../../model/types/article';
+import { type Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleLIstItemSkeleton';
 import { t } from 'i18next';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { type HTMLAttributeAnchorTarget } from 'react';
+import { ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleListProps {
   className?: string
