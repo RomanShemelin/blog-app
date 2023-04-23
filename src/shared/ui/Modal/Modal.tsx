@@ -8,6 +8,7 @@ import {
 } from 'react'
 import { Portal } from '../Portal/Portal'
 import { useTheme } from 'app/providers/ThemeProvider'
+import { Overlay } from "../Overlay/Overlay"
 
 interface ModalProps {
   className?: string
@@ -72,6 +73,7 @@ export function Modal (props: PropsWithChildren<ModalProps>) {
   return (
     <Portal>
       <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
+        <Overlay onClick={onClose}/>
         <div className={cls.overlay} onClick={onCloseHandler}>
           <div
                className={cls.content}
