@@ -9,6 +9,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Popover } from 'shared/ui/Popups';
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 
 interface NotificationButtonProps {
   className?: string
@@ -44,9 +45,11 @@ export function NotificationButton (props: NotificationButtonProps) {
       </BrowserView>
       <MobileView>
         {trigger}
-        <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-          <NotificationList />
-        </Drawer>
+        <AnimationProvider>
+          <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+            <NotificationList />
+          </Drawer>
+        </AnimationProvider>
       </MobileView>
     </div>
   );
