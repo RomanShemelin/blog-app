@@ -15,7 +15,13 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'fsd-check-path'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'fsd-check-path',
+  ],
   rules: {
     'react/jsx-indent': [2, 2],
     'react/function-component-definition': 'off',
@@ -37,12 +43,17 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/display-name': 'off',
-    'fsd-check-path/path-checker': 'error'
+    'fsd-check-path/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
     __API__: true,
-    __PROJECT__:true
+    __PROJECT__: true,
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {},
+    },
   },
   overrides: [
     {
@@ -52,5 +63,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['config/*', 'webpack.config.ts'],
+  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts'],
 };

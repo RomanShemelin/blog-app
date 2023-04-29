@@ -1,10 +1,10 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AvatarDropdown.module.scss';
 
 import { useTranslation } from 'react-i18next';
-import { Dropdown } from 'shared/ui/Popups';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Dropdown } from '@/shared/ui/Popups';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import {
@@ -12,7 +12,7 @@ import {
   isUserAdmin,
   isUserManager,
   userActions
-} from 'entities/User';
+} from '@/entities/User';
 
 interface AvatarDropdownProps {
   className?: string

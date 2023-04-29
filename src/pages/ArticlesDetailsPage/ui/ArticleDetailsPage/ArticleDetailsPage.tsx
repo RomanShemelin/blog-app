@@ -1,12 +1,15 @@
-import { ArticleDetails } from 'entities/Article';
+import { ArticleDetails } from '@/entities/Article';
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import {
+  DynamicModuleLoader,
+  type ReducersList
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
-import { ArticleRecommendationList } from 'features/articleRecommendationList';
-import { VStack } from 'shared/ui/Stack';
-import { Page } from 'widgets/Page/Page';
+import { ArticleRecommendationList } from '@/features/articleRecommendationList';
+import { VStack } from '@/shared/ui/Stack';
+import { Page } from '@/widgets/Page/Page';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticlesDetailsComments } from '../ArticlesDetailsComments/ArticlesDetailsComments';

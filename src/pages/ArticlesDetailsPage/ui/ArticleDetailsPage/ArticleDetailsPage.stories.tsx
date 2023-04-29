@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 
-import { ArticleType, type Article } from 'entities/Article';
-import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ArticleType, type Article } from '@/entities/Article';
+import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions

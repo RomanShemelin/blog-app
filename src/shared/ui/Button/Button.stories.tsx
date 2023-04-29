@@ -1,8 +1,8 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 
 import { Button, ButtonSize, ButtonTheme } from './Button'
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from 'app/providers/ThemeProvider'
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { Theme } from '@/app/providers/ThemeProvider'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {

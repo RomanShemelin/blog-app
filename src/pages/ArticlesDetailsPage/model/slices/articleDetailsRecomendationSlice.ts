@@ -3,9 +3,9 @@ import {
   createSlice
 } from '@reduxjs/toolkit';
 
-import { type StateSchema } from 'app/providers/StoreProvider';
+import { type StateSchema } from '@/app/providers/StoreProvider';
 
-import { type Article } from 'entities/Article';
+import { type Article } from '@/entities/Article';
 import { fetchArticleRecomendation } from '../services/fetchArticleRecomendation/fetchArticleRecomendation';
 import { type ArticleDetailsRecomendationSchema } from '../types/ArticleDetailsRecomendationSchema';
 
