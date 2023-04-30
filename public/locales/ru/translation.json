@@ -42,7 +42,7 @@
   "Comments": "Комментарии",
   "No comments": "Без комментариев",
   "Add comment": "Добавить комментарий",
-  "Send": "Отправлять",
+  "Send": "Оправить",
   "read more": "читать далее",
   "Read more": "Читать далее...",
   "Back to list of articles": "Вернуться к списку статей",
@@ -68,5 +68,7 @@
   "Error on load articles": "Ошибка при загрузке статей",
   "Profile not found": "Профиль не найден",
   "Admin panel": "Панель администратора",
-  "Access to this page is closed": "Доступ к этой странице закрыт"
+  "Access to this page is closed": "Доступ к этой странице закрыт",
+  "your feedback": "ваш отзыв",
+  "Close": "Закрыть"
 }
