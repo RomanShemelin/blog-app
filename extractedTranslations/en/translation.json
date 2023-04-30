@@ -65,8 +65,15 @@
   "No comments": "",
   "No data provided": "",
   "PROFILE PAGE": "PROFILE PAGE",
+  "Please leave your feedback about the article it will help improve the service": {
+    "": ""
+  },
+  "Please leave your feedback about the article, it will help improve the service": {
+    "": ""
+  },
   "Profile": "Profile",
   "Profile not found": "Profile not found",
+  "Rate the article": "Rate the article",
   "Re": {
     "": {
       "": {
@@ -89,6 +96,9 @@
   "Server error": "",
   "Sort": "Sort",
   "Surname": "Surname",
+  "Thank you": "Thank you",
+  "Thank you for rating": "Thank you for rating",
+  "Thank you for rating!": "Thank you for rating!",
   "Username": "Username",
   "Views": "Views",
   "Y": "Y",

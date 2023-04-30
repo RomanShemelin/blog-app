@@ -1,6 +1,3 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './RatingCard.module.scss';
-
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/shared/ui/Card/Card';
 import { HStack, VStack } from '@/shared/ui/Stack';
@@ -19,15 +16,22 @@ interface RatingCardProps {
   feedbackTitle?: string
   hasfeedback?: boolean
   onCancel?: (starCount: number) => void
-  onAccept?: (starcount: number, feedback?: string) => string
+  onAccept?: (starcount: number, feedback?: string) => void
+  rate?: number
 }
 
 export function RatingCard (props: RatingCardProps) {
-  const { className, feedbackTitle, hasfeedback, onAccept, title } =
-    props;
+  const {
+    className,
+    feedbackTitle,
+    hasfeedback,
+    onAccept,
+    title,
+    rate = 0
+  } = props;
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [starsCount, setStarsCount] = useState(0);
+  const [starsCount, setStarsCount] = useState(rate);
   const [feedback, setFeedback] = useState('');
 
   const onSelectStars = useCallback(
@@ -56,7 +60,11 @@ export function RatingCard (props: RatingCardProps) {
   const modalContent = (
     <VStack max gap='32'>
       <Text title={feedbackTitle} />
-      <Input value={feedback} onChange={setFeedback} placeholder={t('your feedback')} />
+      <Input
+        value={feedback}
+        onChange={setFeedback}
+        placeholder={t('your feedback')}
+      />
       <HStack max gap='16' justify='end'>
         <Button onClick={cancelHandle} theme={ButtonTheme.OUTlINE_RED}>
           {t('Close')}
@@ -67,10 +75,14 @@ export function RatingCard (props: RatingCardProps) {
   );
 
   return (
-    <Card className={classNames(cls.RatingCard, {}, [className])}>
+    <Card className={className} max>
       <VStack align='center' gap='8'>
-        <Text title={title} />
-        <StarRating size={40} onSelect={onSelectStars} />
+        <Text title={starsCount ? t('Thank you for rating') : title} />
+        <StarRating
+          size={40}
+          onSelect={onSelectStars}
+          selectStars={starsCount}
+        />
       </VStack>
       <Modal isOpen={isModalOpen}></Modal>
       <BrowserView>
