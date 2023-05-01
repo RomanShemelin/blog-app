@@ -4,7 +4,6 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 
 import { Modal } from './Modal'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Modal',
   component: Modal,

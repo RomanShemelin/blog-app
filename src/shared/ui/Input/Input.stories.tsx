@@ -1,7 +1,6 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { Input } from './Input'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Input',
   component: Input,

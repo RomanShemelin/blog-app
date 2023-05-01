@@ -2,7 +2,6 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react';
 
 import { Code } from './Code';
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Code',
   component: Code,

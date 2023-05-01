@@ -21,6 +21,7 @@ export function NotificationItem (props: NotificationItemProps) {
       <Text title={item.tittle} text={item.description}/>
     </Card>
   )
+
   if (item.href) {
     return (
       <a className={cls.link} target={'_blank'} href={item.href} rel="noreferrer">

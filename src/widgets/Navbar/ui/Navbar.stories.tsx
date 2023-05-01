@@ -5,9 +5,8 @@ import { Theme } from '@/app/providers/ThemeProvider'
 import { Navbar } from './Navbar'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'widjet/Navbar',
+  title: 'widjets/Navbar',
   component: Navbar,
   argTypes: {
     backgroundColor: { control: 'color' }

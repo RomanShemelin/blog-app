@@ -3,7 +3,6 @@ import { type ComponentMeta, type ComponentStory } from '@storybook/react';
 import { Text } from '../Text/Text';
 import { Card } from './Card';
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Card',
   component: Card,

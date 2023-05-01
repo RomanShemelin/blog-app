@@ -3,9 +3,8 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/app/providers/ThemeProvider'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'shared/ThemeSwitcher',
+  title: 'widjets/ThemeSwitcher',
   component: ThemeSwitcher,
   argTypes: {
     backgroundColor: { control: 'color' }

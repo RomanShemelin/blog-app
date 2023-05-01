@@ -4,9 +4,8 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/app/providers/ThemeProvider'
 import { PageError } from './PageError'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'widjet/PageError',
+  title: 'widjets/PageError',
   component: PageError,
   argTypes: {
     backgroundColor: { control: 'color' }

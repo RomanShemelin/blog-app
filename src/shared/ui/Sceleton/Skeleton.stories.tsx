@@ -4,7 +4,6 @@ import { Theme } from '@/app/providers/ThemeProvider';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Skeleton } from './Skeleton';
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Skeleton',
   component: Skeleton,

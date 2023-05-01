@@ -3,7 +3,6 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 import { Avatar } from './Avatar'
 import AvatarImg from '../../assets/tests/storybook.jpg'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'widjet/Avatar',
   component: Avatar,

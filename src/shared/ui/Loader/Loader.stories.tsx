@@ -3,7 +3,6 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/app/providers/ThemeProvider'
 import { Loader } from './Loader'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Loader',
   component: Loader,

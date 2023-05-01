@@ -4,7 +4,6 @@ import { Button } from '../../../Button/Button'
 
 import { Dropdown } from './Dropdown'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Dropdown',
   component: Dropdown,

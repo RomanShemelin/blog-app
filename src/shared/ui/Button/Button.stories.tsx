@@ -4,7 +4,6 @@ import { Button, ButtonSize, ButtonTheme } from './Button'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from '@/app/providers/ThemeProvider'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Button',
   component: Button,

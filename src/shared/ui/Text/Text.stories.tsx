@@ -4,7 +4,6 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 
 import { Text, TextSize, TextTheme } from './Text'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'shared/Text',
   component: Text,

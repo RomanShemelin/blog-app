@@ -35,6 +35,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
     '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/consistent-type-assertions': 'off',
     'i18next/no-literal-string': [
       'error',
       { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },

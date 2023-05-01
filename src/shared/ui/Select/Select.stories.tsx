@@ -2,7 +2,6 @@ import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 
 import { Select } from './Select'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
   title: 'widjet/Select',
   component: Select,

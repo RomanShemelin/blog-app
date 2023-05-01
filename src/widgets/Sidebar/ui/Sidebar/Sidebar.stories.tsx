@@ -5,9 +5,8 @@ import { Theme } from '@/app/providers/ThemeProvider'
 import { Sidebar } from './Sidebar'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
-  title: 'widjet/Sidebar',
+  title: 'widjets/Sidebar',
   component: Sidebar,
   argTypes: {
     backgroundColor: { control: 'color' }
