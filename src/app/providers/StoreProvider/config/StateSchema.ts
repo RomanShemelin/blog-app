@@ -6,7 +6,6 @@ import {
 } from '@reduxjs/toolkit'
 import { type AxiosInstance } from 'axios'
 import { type ArticleDetailsSchema } from '@/entities/Article'
-import { type CounterSchema } from '@/entities/Counter'
 import { type UserSchema } from '@/entities/User'
 import { type AddCommnetFormSchema } from '@/features/addCommentForm'
 import { type LoginSchema } from '@/features/AuthByUsername'
@@ -20,7 +19,6 @@ import { type CombinedState } from 'redux'
 import { type rtkApi } from '@/shared/api/rtkApi'
 
 export interface StateSchema {
-  counter: CounterSchema
   user: UserSchema
   scrollsave: ScrollSaveSchema
   [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
