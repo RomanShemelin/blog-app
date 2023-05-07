@@ -100,7 +100,8 @@
     "webpack": "^5.69.1",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "postinstall": "rm ./scripts/clear-cache.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
