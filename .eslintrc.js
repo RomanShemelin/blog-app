@@ -44,7 +44,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/display-name': 'off',
-    'fsd-check-path/path-checker': ['error', {alias: '@'}],
+    'fsd-check-path/path-checker': 2,
   },
   globals: {
     __IS_DEV__: true,

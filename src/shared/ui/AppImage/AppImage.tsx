@@ -1,17 +1,17 @@
 import {
-  ImgHTMLAttributes,
-  ReactElement,
+  type ImgHTMLAttributes,
+  type ReactElement,
   useLayoutEffect,
-  useState,
+  useState
 } from 'react';
 
 interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
-  className?: string;
-  fallback?: ReactElement;
-  errorFallback?: ReactElement;
+  className?: string
+  fallback?: ReactElement
+  errorFallback?: ReactElement
 }
 
-export function AppImage(props: AppImageProps) {
+export function AppImage (props: AppImageProps) {
   const {
     className,
     src,

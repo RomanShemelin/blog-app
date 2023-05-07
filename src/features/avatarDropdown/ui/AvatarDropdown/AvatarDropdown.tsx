@@ -1,5 +1,4 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './AvatarDropdown.module.scss';
 
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from '@/shared/ui/Popups';
@@ -37,13 +36,13 @@ export function AvatarDropdown (props: AvatarDropdownProps) {
   }
   return (
     <Dropdown
-      className={classNames(cls.AvatarDropdown, {}, [className])}
+      className={className}
       trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
       items={[
         ...(isAdminPanelAvailable
           ? [{ content: t('Admin panel'), href: getRouteAdmin() }]
           : []),
-        { content: t('Profile'), href: getRouteProfile(authData.id)},
+        { content: t('Profile'), href: getRouteProfile(authData.id) },
         { content: t('Logout'), onClick: onLogout }
       ]}
     />

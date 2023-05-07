@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { type SortOrder } from '@/shared/types';
+import { type SortOrder } from '@/shared/types/sort';
 import { Card } from '@/shared/ui/Card/Card';
 import { Input } from '@/shared/ui/Input/Input';
 import {
@@ -23,9 +23,9 @@ import {
   getArticlesView
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
-import { ArticleSortSelector } from "@/features/ArticleSortSelector";
-import { ArticleTypeTabs } from "@/features/ArticleTypeTabs";
-import { ArticleViewSelector } from "@/features/ArticleViewSelector";
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 
 interface ArticlesPageFiltersProps {
   className?: string

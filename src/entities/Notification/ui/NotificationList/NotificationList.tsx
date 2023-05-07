@@ -1,5 +1,4 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './NotificationList.module.scss';
 
 import { Skeleton } from '@/shared/ui/Sceleton/Skeleton';
 import { VStack } from '@/shared/ui/Stack';
@@ -21,7 +20,7 @@ export function NotificationList (props: NotificationListProps) {
       <VStack
         gap='16'
         max
-        className={classNames(cls.NotificationList, {}, [className])}
+        className={className}
       >
         <Skeleton width={'100%'} border={'8px'} height={'80px'}/>
         <Skeleton width={'100%'} border={'8px'} height={'80px'}/>

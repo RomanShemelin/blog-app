@@ -28,7 +28,7 @@ export function ArticleDetailsPageHeader (
   }, [navigate]);
 
   const onEditArticle = useCallback(() => {
-    if(article){
+    if (article) {
       navigate(getRouteArticleEdit(article.id));
     }
   }, [article, navigate]);
