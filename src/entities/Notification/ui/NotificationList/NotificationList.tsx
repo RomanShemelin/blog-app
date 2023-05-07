@@ -32,7 +32,7 @@ export function NotificationList (props: NotificationListProps) {
   return (
     <VStack
       gap='16'
-      className={classNames(cls.NotificationList, {}, [className])}
+      className={className}
     >
       {data?.map((item) => (
         <NotificationItem key={item.id} item={item} />
