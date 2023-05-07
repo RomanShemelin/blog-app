@@ -2,10 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticlesPageFilters.module.scss';
 
 import {
-  ArticleSortSelector,
   type ArticleType,
-  ArticleTypeTabs,
-  ArticleViewSelector,
   type ArticleSortField,
   type ArticleView
 } from '@/entities/Article';
@@ -26,6 +23,9 @@ import {
   getArticlesView
 } from '../../model/selectors/articlesPageSelectors';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
+import { ArticleSortSelector } from "@/features/ArticleSortSelector";
+import { ArticleTypeTabs } from "@/features/ArticleTypeTabs";
+import { ArticleViewSelector } from "@/features/ArticleViewSelector";
 
 interface ArticlesPageFiltersProps {
   className?: string
