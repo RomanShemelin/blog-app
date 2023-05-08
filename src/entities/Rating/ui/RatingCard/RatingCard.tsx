@@ -61,21 +61,31 @@ export function RatingCard (props: RatingCardProps) {
     <VStack max gap='32'>
       <Text title={feedbackTitle} />
       <Input
+        data-testid="RatingCard.Input"
         value={feedback}
         onChange={setFeedback}
         placeholder={t('your feedback')}
       />
       <HStack max gap='16' justify='end'>
-        <Button onClick={cancelHandle} theme={ButtonTheme.OUTlINE_RED}>
+        <Button
+          data-testid="RatingCard.Close"
+          onClick={cancelHandle}
+          theme={ButtonTheme.OUTlINE_RED}
+        >
           {t('Close')}
         </Button>
-        <Button onClick={acceptHandle}>{t('Send')}</Button>
+        <Button
+          data-testid="RatingCard.Send"
+          onClick={acceptHandle}
+        >{
+        t('Send')}
+        </Button>
       </HStack>
     </VStack>
   );
 
   return (
-    <Card className={className} max>
+    <Card data-testid="RatingCard" className={className} max>
       <VStack align='center' gap='8'>
         <Text title={starsCount ? t('Thank you for rating') : title} />
         <StarRating

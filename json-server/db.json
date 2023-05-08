@@ -630,7 +630,7 @@
       "roles": [
         "ADMIN"
       ],
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDbZ-wKLY24CLmjASafU4dTiw2hZZ2c_NJQ&usqp=CAU"
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLOUZx2HrmJ-D0IrUpq-46n5NcX5umxo2Og&usqp=CAU"
     }
   ],
   "profile": [
@@ -652,6 +652,16 @@
       "country": "Belarus",
       "city": "Minsk",
       "username": "rick",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLOUZx2HrmJ-D0IrUpq-46n5NcX5umxo2Og&usqp=CAU"
+    },
+    {
+      "id": "4",
+      "firstname": "test",
+      "lastname": "user",
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Minsk",
+      "username": "testuser",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLOUZx2HrmJ-D0IrUpq-46n5NcX5umxo2Og&usqp=CAU"
     }
   ],
