@@ -64,5 +64,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts'],
+  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts', 'cypress/*', 'cypress.config.ts'],
 };

@@ -13,7 +13,7 @@ export function NotFoundPage (props: PropsWithChildren<NotFoundPageProps>) {
   const { t } = useTranslation()
 
   return (
-    <div className={classNames(cls.NotFoundPage, {}, [className])}>
+    <div data-testid='NotFoundPage' className={classNames(cls.NotFoundPage, {}, [className])}>
       {t('Страница не найдена')}
     </div>
   )

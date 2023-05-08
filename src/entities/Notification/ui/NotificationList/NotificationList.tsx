@@ -1,4 +1,3 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { Skeleton } from '@/shared/ui/Sceleton/Skeleton';
 import { VStack } from '@/shared/ui/Stack';
