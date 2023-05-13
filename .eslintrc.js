@@ -1,3 +1,5 @@
+const { features } = require('process');
+
 module.exports = {
   env: {
     browser: true,
@@ -64,5 +66,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts', 'cypress/*', 'cypress.config.ts'],
+  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts', 'cypress/*', 'cypress.config.ts', 'remove-features.ts'],
 };
