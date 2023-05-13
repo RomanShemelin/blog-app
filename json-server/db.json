@@ -549,6 +549,45 @@
           ]
         }
       ]
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "vSQMaD_"
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "bkt77Sj"
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Биология",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "Oa9NAtT"
     }
   ],
   "comments": [
@@ -603,6 +642,9 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-kcF8vYQ0gRpEfdrWBSljJof6uOahQlKnw&usqp=CAU"
     },
     {
@@ -612,6 +654,9 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDbZ-wKLY24CLmjASafU4dTiw2hZZ2c_NJQ&usqp=CAU"
     },
     {
@@ -621,6 +666,9 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false
+      },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDbZ-wKLY24CLmjASafU4dTiw2hZZ2c_NJQ&usqp=CAU"
     },
     {
@@ -630,6 +678,9 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true
+      },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLOUZx2HrmJ-D0IrUpq-46n5NcX5umxo2Og&usqp=CAU"
     }
   ],

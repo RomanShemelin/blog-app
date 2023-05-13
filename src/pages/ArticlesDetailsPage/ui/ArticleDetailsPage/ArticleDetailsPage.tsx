@@ -15,6 +15,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import { ArticlesDetailsComments } from '../ArticlesDetailsComments/ArticlesDetailsComments';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleRating } from '@/features/articleRating';
+import { getFeatureFlags } from '@/shared/lib/features';
 
 export interface ArticleDetailsPageProps {
   className?: string
@@ -27,6 +28,7 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { className } = props;
   const { id } = useParams<{ id: string }>();
+  const isArticleRatingEnable = getFeatureFlags('isArticleRatingEnabled')
 
   if (!id) return null
 
@@ -36,7 +38,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader/>
           <ArticleDetails id={id} />
-          <ArticleRating articleId={id}/>
+          {isArticleRatingEnable && <ArticleRating articleId={id}/>}
           <ArticleRecommendationList/>
           <ArticlesDetailsComments id={id}/>
         </VStack>

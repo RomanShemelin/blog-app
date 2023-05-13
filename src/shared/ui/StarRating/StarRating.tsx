@@ -6,15 +6,15 @@ import { Icon } from '../Icon/Icon';
 import { useState } from 'react';
 
 interface StarRatingProps {
-  className?: string;
-  onSelect?: (starCount: number) => void;
-  size?: number;
-  selectStars?: number;
+  className?: string
+  onSelect?: (starCount: number) => void
+  size?: number
+  selectStars?: number
 }
 
 const stars = [1, 2, 3, 4, 5];
 
-export function StarRating(props: StarRatingProps) {
+export function StarRating (props: StarRatingProps) {
   const { className, size = 30, selectStars = 0, onSelect } = props;
   const [currentStarCount, setCurrentStarsCount] = useState(selectStars);
   const [isSelected, setSelected] = useState(Boolean(selectStars));
@@ -44,7 +44,7 @@ export function StarRating(props: StarRatingProps) {
       {stars.map((star) => (
         <Icon
           className={classNames(cls.StarIcon, { [cls.selected]: isSelected }, [
-            currentStarCount >= star ? cls.hovered : cls.normal,
+            currentStarCount >= star ? cls.hovered : cls.normal
           ])}
           Svg={StarIcon}
           key={star}
