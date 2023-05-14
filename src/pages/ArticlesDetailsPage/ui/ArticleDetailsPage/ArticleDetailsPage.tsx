@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 
 import { ArticleRating } from '@/features/articleRating';
 import { ArticleRecommendationList } from '@/features/articleRecommendationList';
-import { toggleFeatures } from '@/shared/lib/features';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/Card/Card';
 import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page/Page';
@@ -34,19 +34,17 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id) return null
 
-  const articleRatingCard = toggleFeatures({
-    name: 'isArticleRatingEnabled',
-    on: () => <ArticleRating articleId={id} />,
-    off: () => <Card>{t('Article rating coming soon')}</Card>
-  });
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <VStack gap="16" max>
           <ArticleDetailsPageHeader/>
           <ArticleDetails id={id} />
-          {articleRatingCard}
+          <ToggleFeatures
+              feature={'isArticleRatingEnabled'}
+              on={<ArticleRating articleId={id} />}
+              off={<Card>{t('Article rating coming soon')}</Card>}
+          />
           <ArticleRecommendationList/>
           <ArticlesDetailsComments id={id}/>
         </VStack>

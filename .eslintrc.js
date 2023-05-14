@@ -66,5 +66,5 @@ module.exports = {
       },
     },
   ],
-  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts', 'cypress/*', 'cypress.config.ts', 'remove-features.ts'],
+  ignorePatterns: ['config/*', 'webpack.config.ts', 'updateImports.ts', 'cypress/*', 'cypress.config.ts', 'remove-features.ts', 'ToggleFeatures.tsx'],
 };
