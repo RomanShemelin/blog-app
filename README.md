@@ -29,8 +29,6 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run test:ui:html` - Генерация HTML отчета для скриншотных тестов
 - `npm run storybook` - запуск Storybook
 - `npm run storybook:build` - Сборка storybook билда
-- `npm run prepare` - прекоммит хуки
-- `npm run generate:slice` - Скрипт для генерации FSD слайсов
 
 ----
 
@@ -141,12 +139,10 @@ Clear.args = {
 
 ----
 
-## CI pipeline и pre commit хуки
+## CI pipeline
 
 Конфигурация github actions находится в /.github/workflows.
 В ci прогоняются все виды тестов, сборка проекта и сторибука, линтинг.
-
-В прекоммит хуках проверяем проект линтерами, конфиг в /.husky
 
 ----
 

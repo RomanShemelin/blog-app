@@ -643,7 +643,8 @@
         "ADMIN"
       ],
       "features": {
-        "isArticleRatingEnabled": true
+        "isArticleRatingEnabled": true,
+        "isAppRedesigned": true
       },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-kcF8vYQ0gRpEfdrWBSljJof6uOahQlKnw&usqp=CAU"
     },
