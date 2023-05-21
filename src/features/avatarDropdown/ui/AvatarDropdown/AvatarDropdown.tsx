@@ -6,8 +6,8 @@ import {
   userActions
 } from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/config/routeConfig/routeConfig';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Avatar } from '@/shared/ui/deprecated/Avatar/Avatar';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';

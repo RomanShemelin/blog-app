@@ -2,7 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './PageLoader.module.scss'
 
 import type { PropsWithChildren } from 'react'
-import { Loader } from '@/shared/ui/Loader/Loader'
+import { Loader } from '@/shared/ui/deprecated/Loader/Loader'
 
 interface PageLoaderProps {
   className?: string

@@ -4,7 +4,7 @@ import cls from './ArticleSortSelector.module.scss';
 import { useMemo, type PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next';
 import { type SortOrder } from '@/shared/types/sort';
-import { Select, type SelectOption } from '@/shared/ui/Select/Select';
+import { Select, type SelectOption } from '@/shared/ui/deprecated/Select/Select';
 import { ArticleSortField } from '@/entities/Article';
 
 interface ArticleSortSelectorProps {

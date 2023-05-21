@@ -2,9 +2,9 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 
 import { useTheme } from '@/app/providers/ThemeProvider'
 import ThemeIcon from '@/shared/assets/icons/theme-light.svg'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button/Button'
 import { memo, type PropsWithChildren } from 'react'
-import { Icon } from '@/shared/ui/Icon/Icon'
+import { Icon } from '@/shared/ui/deprecated/Icon/Icon'
 
 interface ThemeSwitcherProps {
   className?: string

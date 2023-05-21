@@ -3,14 +3,14 @@ import cls from './Sidebar.module.scss'
 
 import { memo, useMemo, useState, type PropsWithChildren } from 'react'
 import { useSelector } from 'react-redux'
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button'
-import { LangSwitcher } from '@/shared/ui/LangSwitcher/LangSwitcher'
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/deprecated/Button/Button'
+import { LangSwitcher } from '@/shared/ui/deprecated/LangSwitcher/LangSwitcher'
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher'
 import { getSideBarItems } from '../../model/selectors/getSideBarItems'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
-import { VStack } from '@/shared/ui/Stack/VStack/VStack'
+import { VStack } from '@/shared/ui/deprecated/Stack/VStack/VStack'
 import { ToggleFeatures } from '@/shared/lib/features'
-import { AppLogo } from '@/shared/ui/AppLogo'
+import { AppLogo } from '@/shared/ui/deprecated/AppLogo'
 
 interface SidebarProps {
   className?: string

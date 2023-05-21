@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Page } from '@/widgets/Page/Page'
-import { StarRating } from '@/shared/ui/StarRating/StarRating'
+import { StarRating } from '@/shared/ui/deprecated/StarRating/StarRating'
 import { RatingCard } from '@/entities/Rating'
 
 const MainPage = () => {

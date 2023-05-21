@@ -9,8 +9,8 @@ import {
   type ReducersList
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Button } from '@/shared/ui/Button/Button';
-import { Input } from '@/shared/ui/Input/Input';
+import { Button } from '@/shared/ui/deprecated/Button/Button';
+import { Input } from '@/shared/ui/deprecated/Input/Input';
 import {
   getCommentFormText
 } from '../../model/selectors/addCommmentFormSelectors';
@@ -18,7 +18,7 @@ import {
   addCommentFormActions,
   addCommentFormReducers
 } from '@/features/addCommentForm/model/slices/addCommentFormSlice';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 
 export interface AddCommentFormProps {
   className?: string

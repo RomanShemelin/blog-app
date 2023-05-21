@@ -7,8 +7,8 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getRouteArticleEdit, getRouteArticles } from '@/shared/config/routeConfig/routeConfig';
-import { Button } from '@/shared/ui/Button/Button';
-import { HStack } from '@/shared/ui/Stack';
+import { Button } from '@/shared/ui/deprecated/Button/Button';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 
 interface ArticleDetailsPageHeaderProps {
   className?: string

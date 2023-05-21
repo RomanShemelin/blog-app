@@ -7,11 +7,11 @@ import {
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Text, TextAlign, TextSize } from '@/shared/ui/deprecated/Text/Text';
+import { Avatar } from '@/shared/ui/deprecated/Avatar/Avatar';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg';
-import { Icon } from '@/shared/ui/Icon/Icon';
+import { Icon } from '@/shared/ui/deprecated/Icon/Icon';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
@@ -24,8 +24,8 @@ import {
   getArticleDetailsIsLoading
 } from '../../model/selectors/articleDetails';
 import { type ArticleBlock } from '../../model/types/article';
-import { Skeleton } from '@/shared/ui/Sceleton/Skeleton';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { Skeleton } from '@/shared/ui/deprecated/Sceleton/Skeleton';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import { ArticleBlockType } from '../../model/consts/articleConsts';
 
 interface ArticleDetailsProps {

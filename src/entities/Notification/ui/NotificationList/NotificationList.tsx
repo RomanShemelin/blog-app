@@ -1,6 +1,6 @@
 
-import { Skeleton } from '@/shared/ui/Sceleton/Skeleton';
-import { VStack } from '@/shared/ui/Stack';
+import { Skeleton } from '@/shared/ui/deprecated/Sceleton/Skeleton';
+import { VStack } from '@/shared/ui/deprecated/Stack';
 import { useNotifications } from '../../api/notificationApi';
 import { NotificationItem } from '../NotificationItem/NotificationItem';
 

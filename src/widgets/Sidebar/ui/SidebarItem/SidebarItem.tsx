@@ -4,7 +4,7 @@ import { getUserAuthData } from '@/entities/User'
 import { memo } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
+import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink/AppLink'
 import { type SidebarItemType } from '../../model/types/sidebar'
 import { useTranslation } from 'react-i18next'
 
