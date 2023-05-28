@@ -25,7 +25,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import { type ArticleBlock } from '../../model/types/article';
 import { Skeleton } from '@/shared/ui/deprecated/Sceleton/Skeleton';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { ArticleBlockType } from '../../model/consts/articleConsts';
 
 interface ArticleDetailsProps {

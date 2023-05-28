@@ -18,7 +18,7 @@ import {
   addCommentFormActions,
   addCommentFormReducers
 } from '@/features/addCommentForm/model/slices/addCommentFormSlice';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 export interface AddCommentFormProps {
   className?: string

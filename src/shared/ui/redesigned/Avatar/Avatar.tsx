@@ -11,14 +11,9 @@ interface AvatarProps {
   src?: string
   size?: number
   alt?: string
-  fallbackInverted?: boolean
 }
 
-/**
- * устарел, используем новые компоненты из папки redesigned
- *@deprecated
- */
-export function Avatar ({ className, src, size = 100, alt, fallbackInverted }: AvatarProps) {
+export function Avatar ({ className, src, size = 100, alt }: AvatarProps) {
   const mods: Mods = {};
 
   const styles = useMemo<CSSProperties>(() => {
@@ -29,7 +24,7 @@ export function Avatar ({ className, src, size = 100, alt, fallbackInverted }: A
   }, [size]);
 
   const fallback = <Skeleton width={size} height={size} border={'50%'}/>
-  const errorFallback = <Icon inverted={fallbackInverted} Svg={UserIcon} width={size} height={size}/>
+  const errorFallback = <Icon Svg={UserIcon} width={size} height={size}/>
 
   return (
     <AppImage

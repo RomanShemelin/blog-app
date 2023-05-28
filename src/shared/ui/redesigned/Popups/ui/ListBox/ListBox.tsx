@@ -25,14 +25,10 @@ interface ListBoxProps {
   label?: string
 }
 
-/**
- * устарел, используем новые компоненты из папки redesigned
- *@deprecated
- */
 export function ListBox (props: ListBoxProps) {
   const { items, className, value, defaultValue, onChange, readonly, direction = 'bottom left', label } = props
 
-  const optionClasses = [mapDirectionClass[direction]]
+  const optionClasses = [mapDirectionClass[direction], popupCls.menu]
 
   return (
     <HStack gap="4">

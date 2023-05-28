@@ -6,8 +6,11 @@ import {
   userActions
 } from '@/entities/User';
 import { getRouteAdmin, getRouteProfile } from '@/shared/config/routeConfig/routeConfig';
-import { Avatar } from '@/shared/ui/deprecated/Avatar/Avatar';
-import { Dropdown } from '@/shared/ui/deprecated/Popups';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Avatar as AvatarDepreecated } from '@/shared/ui/deprecated/Avatar/Avatar';
+import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
+import { Avatar } from '@/shared/ui/redesigned/Avatar/Avatar';
+import { Dropdown } from '@/shared/ui/redesigned/Popups';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
@@ -33,17 +36,28 @@ export function AvatarDropdown (props: AvatarDropdownProps) {
   if (!authData) {
     return null;
   }
+
+  const items = [
+    ...(isAdminPanelAvailable
+      ? [{ content: t('Admin panel'), href: getRouteAdmin() }]
+      : []),
+    { content: t('Profile'), href: getRouteProfile(authData.id) },
+    { content: t('Logout'), onClick: onLogout }
+  ]
+
   return (
-    <Dropdown
-      className={className}
-      trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
-      items={[
-        ...(isAdminPanelAvailable
-          ? [{ content: t('Admin panel'), href: getRouteAdmin() }]
-          : []),
-        { content: t('Profile'), href: getRouteProfile(authData.id) },
-        { content: t('Logout'), onClick: onLogout }
-      ]}
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      on={<Dropdown
+        className={className}
+        trigger={<Avatar size={40} src={authData.avatar} />}
+        items={items}
+      />}
+      off={<DropdownDeprecated
+        className={className}
+        trigger={<AvatarDepreecated fallbackInverted size={30} src={authData.avatar} />}
+        items={items}
+      />}
     />
   );
 }
