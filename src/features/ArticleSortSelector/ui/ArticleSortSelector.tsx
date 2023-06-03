@@ -6,6 +6,10 @@ import { useTranslation } from 'react-i18next';
 import { type SortOrder } from '@/shared/types/sort';
 import { Select, type SelectOption } from '@/shared/ui/deprecated/Select/Select';
 import { ArticleSortField } from '@/entities/Article';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { ListBox } from '@/shared/ui/redesigned/Popups';
+import { VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text/Text';
 
 interface ArticleSortSelectorProps {
   className?: string
@@ -53,20 +57,40 @@ export function ArticleSortSelector (
   );
 
   return (
-    <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
-      <Select
-        options={orderOptions}
-        label={t('Sort')}
-        value={order}
-        onChange={onChangeOrder}
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      on={<div className={classNames(cls.ArticleSortSelectorRedesigned, {}, [className])}>
+        <VStack gap="8">
+          <Text text={t('Sort')}/>
+          <ListBox
+            items={orderOptions}
+            value={order}
+            onChange={onChangeOrder}
         />
-      <Select
-        options={sortFieldOptions}
-        label={t('Sort')}
-        value={sort}
-        onChange={onChangeSort}
-        className={cls.sort}
+          <ListBox
+            items={sortFieldOptions}
+            value={sort}
+            onChange={onChangeSort}
+            className={cls.sort}
         />
-    </div>
+        </VStack>
+      </div>}
+      off={<div className={classNames(cls.ArticleSortSelector, {}, [className])}>
+        <Select
+          options={orderOptions}
+          label={t('Sort')}
+          value={order}
+          onChange={onChangeOrder}
+        />
+        <Select
+          options={sortFieldOptions}
+          label={t('Sort')}
+          value={sort}
+          onChange={onChangeSort}
+          className={cls.sort}
+        />
+      </div>}
+    />
+
   );
 }
