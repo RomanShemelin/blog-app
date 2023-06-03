@@ -9,6 +9,8 @@ import { Card } from '@/shared/ui/redesigned/Card/Card';
 import { VStack } from '@/shared/ui/redesigned/Stack';
 import { useTranslation } from 'react-i18next';
 import { Input } from '@/shared/ui/redesigned/Input/Input';
+import SearchIcon from '@/shared/assets/icons/search.svg'
+import { Icon } from '@/shared/ui/redesigned/Icon/Icon';
 
 interface ArticleFiltersProps {
   className?: string
@@ -43,6 +45,7 @@ export function ArticleFilters (props: ArticleFiltersProps) {
           value={search}
           onChange={onChangeSearch}
           placeholder={t('Search')}
+          addonLeft={<Icon Svg={SearchIcon}/>}
         />
         <ArticleSortSelector
           order={order}
