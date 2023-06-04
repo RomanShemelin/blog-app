@@ -28,33 +28,39 @@ export const ArticleListItemSkeleton = memo(
       off: () => CardDeprecated
     });
 
+    const mainClass = toggleFeatures({
+      name: 'isAppRedesigned',
+      on: () => cls.ArticleListItemRedesigned,
+      off: () => cls.ArticleListItem
+    })
+
     if (view === ArticleView.BIG) {
       return (
         <div
-                    className={classNames(cls.ArticleListItem, {}, [
-                      className,
-                      cls[view]
-                    ])}
-                >
+          className={classNames(mainClass, {}, [
+            className,
+            cls[view]
+          ])}
+      >
           <Card className={cls.card}>
             <div className={cls.header}>
               <Skeleton border="50%" height={30} width={30} />
               <Skeleton
-                                width={150}
-                                height={16}
-                                className={cls.username}
-                            />
+                  width={150}
+                  height={16}
+                  className={cls.username}
+              />
               <Skeleton
-                                width={150}
-                                height={16}
-                                className={cls.date}
-                            />
+                  width={150}
+                  height={16}
+                  className={cls.date}
+              />
             </div>
             <Skeleton
-                            width={250}
-                            height={24}
-                            className={cls.title}
-                        />
+                  width={250}
+                  height={24}
+                  className={cls.title}
+              />
             <Skeleton height={200} className={cls.img} />
             <div className={cls.footer}>
               <Skeleton height={36} width={200} />
@@ -66,18 +72,18 @@ export const ArticleListItemSkeleton = memo(
 
     return (
       <div
-                className={classNames(cls.ArticleListItem, {}, [
-                  className,
-                  cls[view]
-                ])}
-            >
+        className={classNames(mainClass, {}, [
+          className,
+          cls[view]
+        ])}
+    >
         <Card className={cls.card}>
           <div className={cls.imageWrapper}>
             <Skeleton
-                            width={200}
-                            height={200}
-                            className={cls.img}
-                        />
+                width={200}
+                height={200}
+                className={cls.img}
+            />
           </div>
           <div className={cls.infoWrapper}>
             <Skeleton width={130} height={16} />

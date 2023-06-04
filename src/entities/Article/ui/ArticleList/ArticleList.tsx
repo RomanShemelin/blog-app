@@ -8,6 +8,8 @@ import { t } from 'i18next';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text/Text';
 import { type HTMLAttributeAnchorTarget } from 'react';
 import { ArticleView } from '../../model/consts/articleConsts';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleListProps {
   className?: string
@@ -42,14 +44,32 @@ export function ArticleList (props: ArticleListProps) {
     );
   }
 
-  return <div
-    className={classNames(cls.ArticleList, {}, [className, cls[view]])}
-    data-testid={'ArticleList'}
-    >
-    {articles.length > 0
-      ? articles.map(renderArticle)
-      : null
-}
-    {isLoading && getSkeletons(view)}
-  </div>;
+  return (
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      on={<HStack
+        wrap="wrap"
+        gap="16"
+        className={classNames(cls.ArticleListRedesigned, {}, [])}
+        data-testid={'ArticleList'}
+        >
+        {articles.length > 0
+          ? articles.map(renderArticle)
+          : null
+    }
+        {isLoading && getSkeletons(view)}
+      </HStack>}
+      off={<div
+        className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+        data-testid={'ArticleList'}
+        >
+        {articles.length > 0
+          ? articles.map(renderArticle)
+          : null
+    }
+        {isLoading && getSkeletons(view)}
+      </div>}
+    />
+
+  )
 }
