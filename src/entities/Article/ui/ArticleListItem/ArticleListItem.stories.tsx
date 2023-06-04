@@ -1,8 +1,7 @@
 /* eslint-disable max-len */
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
 import { type ComponentMeta, type ComponentStory } from '@storybook/react';
-import { ArticleView } from '../../model/consts/articleConsts';
 
+import { ArticleView } from '../../model/consts/articleConsts';
 import { type Article } from '../../model/types/article';
 import { ArticleListItem } from './ArticleListItem';
 
@@ -14,7 +13,9 @@ export default {
   }
 } as ComponentMeta<typeof ArticleListItem>;
 
-const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => (
+  <ArticleListItem {...args} />
+);
 
 const article = {
   id: '1',
@@ -28,12 +29,7 @@ const article = {
     username: 'Ulbi tv',
     avatar: 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg'
   },
-  type: [
-    'IT',
-    'SCIENCE',
-    'POLITICS',
-    'ECONOMICS'
-  ],
+  type: ['IT', 'SCIENCE', 'POLITICS', 'ECONOMICS'],
   blocks: [
     {
       id: '1',

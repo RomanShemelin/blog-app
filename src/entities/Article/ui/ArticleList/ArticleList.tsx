@@ -3,7 +3,7 @@ import cls from './ArticleList.module.scss';
 
 import { type Article } from '../../model/types/article';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
-import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleLIstItemSkeleton';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { t } from 'i18next';
 import { Text, TextSize } from '@/shared/ui/deprecated/Text/Text';
 import { type HTMLAttributeAnchorTarget } from 'react';
