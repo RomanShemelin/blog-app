@@ -75,5 +75,9 @@
   "Please leave your feedback about the article it will help improve the service": "Пожалуйста, оставьте отзыв о статье, это поможет улучшить сервис",
   "Thank you": "Спасибо",
   "Thank you for rating": "Спасибо за оценку",
-  "Article rating coming soon": "Скоро будет рейтинг статьи"
+  "Article rating coming soon": "Скоро будет рейтинг статьи",
+  "{{count}} просмотров_zero": "{{count}} просмотров",
+  "{{count}} просмотров_one": "{{count}} просмотр",
+  "{{count}} просмотров_few": "{{count}} просмотра",
+  "{{count}} просмотров_many": "{{count}} просмотров"
 }

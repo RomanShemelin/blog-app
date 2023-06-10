@@ -74,5 +74,8 @@
   "Please leave your feedback about the article it will help improve the service": "Please leave your feedback about the article it will help improve the service",
   "Thank you": "Thank you",
   "Thank you for rating": "Thank you for rating",
-  "Article rating coming soon": "\nArticle rating coming soon"
+  "Article rating coming soon": "\nArticle rating coming soon",
+  "{{count}} просмотров_zero": "{{count}} views",
+  "{{count}} просмотров_one": "{{count}} view",
+  "{{count}} просмотров_other": "{{count}} views"
 }
