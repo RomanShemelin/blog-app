@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 import { type PropsWithChildren, Suspense } from 'react'
-import { Modal } from '@/shared/ui/deprecated/Modal/Modal'
+import { Modal } from '@/shared/ui/redesigned/Modal/Modal'
 import { LoginFormAsync } from '../LoginForm/LoginForm.async'
 import { Loader } from '@/shared/ui/deprecated/Loader/Loader'
 

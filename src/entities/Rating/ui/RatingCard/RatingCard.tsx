@@ -4,11 +4,11 @@ import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Text } from '@/shared/ui/deprecated/Text/Text';
 import { StarRating } from '@/shared/ui/deprecated/StarRating/StarRating';
 import { useCallback, useState } from 'react';
-import { Modal } from '@/shared/ui/deprecated/Modal/Modal';
+import { Modal } from '@/shared/ui/redesigned/Modal/Modal';
 import { Input } from '@/shared/ui/deprecated/Input/Input';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button/Button';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { Drawer } from '@/shared/ui/deprecated/Drawer/Drawer';
+import { Drawer } from '@/shared/ui/redesigned/Drawer/Drawer';
 
 interface RatingCardProps {
   className?: string
