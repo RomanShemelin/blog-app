@@ -77,5 +77,6 @@
   "Article rating coming soon": "\nArticle rating coming soon",
   "{{count}} просмотров_zero": "{{count}} views",
   "{{count}} просмотров_one": "{{count}} view",
-  "{{count}} просмотров_other": "{{count}} views"
+  "{{count}} просмотров_other": "{{count}} views",
+  "An error occurred while discovering the articles": "An error occurred while discovering the articles"
 }
