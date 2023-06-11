@@ -3,8 +3,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ArticleList } from '@/entities/Article';
 import { useTranslation } from 'react-i18next';
 import { VStack } from '@/shared/ui/redesigned/Stack';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text/Text';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text/Text';
 import { useArticleRecommendationList } from '../api/articleRecommendationApi';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface ArticleRecommendationListProps {
   className?: string
@@ -27,7 +29,11 @@ export function ArticleRecommendationList (
       gap='8'
       max className={classNames('', {}, [className])}
     >
-      <Text size={TextSize.L} title={t('Recomend')} />
+      <ToggleFeatures
+      feature="isAppRedesigned"
+      on={<Text size='l' title={t('Recomend')} />}
+      off={<TextDeprecated size={TextSize.L} title={t('Recomend')} />}
+      />
       <ArticleList articles={articles} target={'_blank'} />
     </VStack>
   );

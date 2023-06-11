@@ -4,8 +4,10 @@ import type { PropsWithChildren } from 'react';
 import { useTranslation } from 'react-i18next'
 import { type Comment } from '../../model/types/comment';
 import { CommentCard } from '../CommentCard/CommentCard';
-import { Text } from '@/shared/ui/deprecated/Text/Text';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text/Text';
 import { VStack } from '@/shared/ui/redesigned/Stack';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface CommentListProps {
   className?: string
@@ -33,7 +35,14 @@ export function CommentList (props: PropsWithChildren<CommentListProps>) {
         ? comments.map((comment, index) => (
           <CommentCard isLoading={isLoading} comment={comment} key={index}/>
         ))
-        : <Text text={t('No comments')}/>
+        : (
+          <ToggleFeatures
+            feature="isAppRedesigned"
+            on={ <Text text={t('No comments')}/>}
+            off={ <TextDeprecated text={t('No comments')}/>}
+          />
+
+          )
     }
     </VStack>
   );

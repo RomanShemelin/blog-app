@@ -2,8 +2,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './StarRating.module.scss';
 
 import StarIcon from '@/shared/assets/icons/star.svg';
-import { Icon } from '../Icon/Icon';
+import { Icon as IconDeprecated } from '../Icon/Icon';
 import { useState } from 'react';
+import { toggleFeatures, ToggleFeatures } from '@/shared/lib/features';
+import { Icon } from '../../redesigned/Icon';
 
 interface StarRatingProps {
   className?: string
@@ -44,23 +46,41 @@ export function StarRating (props: StarRatingProps) {
   };
 
   return (
-    <div className={classNames(cls.StarRating, {}, [className])}>
-      {stars.map((star) => (
-        <Icon
-          className={classNames(cls.StarIcon, { [cls.selected]: isSelected }, [
+    <div className={classNames(toggleFeatures({
+      name: 'isAppRedesigned', off: () => cls.StarRating, on: () => cls.StarRatingRedesigned
+    }), {}, [className])}>
+      {stars.map((star) => {
+        const commonProps = {
+          className: classNames(cls.StarIcon, { [cls.selected]: isSelected }, [
             currentStarCount >= star ? cls.hovered : cls.normal
-          ])}
-          Svg={StarIcon}
-          key={star}
-          width={size}
-          height={size}
-          onMouseLeave={onLeave}
-          onMouseEnter={onHover(star)}
-          onClick={onClick(star)}
-          data-testid={`StarRating.${star}`}
-          data-selected={currentStarCount >= star}
-        />
-      ))}
+          ]),
+          Svg: StarIcon,
+          key: star,
+          width: size,
+          height: size,
+          onMouseLeave: onLeave,
+          onMouseEnter: onHover(star),
+          onClick: onClick(star),
+          'data-test': `StarRating.${star}`,
+          'data-selected': currentStarCount >= star
+        }
+        return (
+          // eslint-disable-next-line react/jsx-key
+          <ToggleFeatures
+            feature="isAppRedesigned"
+            on={
+              <Icon
+              clicable={!isSelected}
+                {...commonProps}
+              />}
+            off={
+              <IconDeprecated
+                {...commonProps}
+              />}
+          />
+
+        )
+      })}
     </div>
   );
 }
