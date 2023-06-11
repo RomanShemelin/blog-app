@@ -15,8 +15,10 @@ const App = () => {
   const inited = useSelector(getUserInited);
 
   useEffect(() => {
-    dispatch(userActions.initAuthData());
-  }, [dispatch]);
+    if (!inited) {
+      dispatch(userActions.initAuthData());
+    }
+  }, [dispatch, inited]);
 
   return (
     <ToggleFeatures

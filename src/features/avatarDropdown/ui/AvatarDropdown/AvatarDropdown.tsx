@@ -5,7 +5,7 @@ import {
   isUserManager,
   userActions
 } from '@/entities/User';
-import { getRouteAdmin, getRouteProfile } from '@/shared/config/routeConfig/routeConfig';
+import { getRouteAdmin, getRouteProfile, getRouteSettings } from '@/shared/config/routeConfig/routeConfig';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Avatar as AvatarDepreecated } from '@/shared/ui/deprecated/Avatar/Avatar';
 import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
@@ -42,6 +42,7 @@ export function AvatarDropdown (props: AvatarDropdownProps) {
       ? [{ content: t('Admin panel'), href: getRouteAdmin() }]
       : []),
     { content: t('Profile'), href: getRouteProfile(authData.id) },
+    { content: t('Settings'), href: getRouteSettings() },
     { content: t('Logout'), onClick: onLogout }
   ]
 

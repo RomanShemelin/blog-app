@@ -80,5 +80,10 @@
   "{{count}} просмотров_one": "{{count}} просмотр",
   "{{count}} просмотров_few": "{{count}} просмотра",
   "{{count}} просмотров_many": "{{count}} просмотров",
-  "An error occurred while discovering the articles": "Произошла ошибка при обнаружении статей"
+  "An error occurred while discovering the articles": "Произошла ошибка при обнаружении статей",
+  "Old design": "Старый дизайн",
+  "New design": "Новый дизайн",
+  "Settings": "Настройки",
+  "User settings": "Пользовательские настройки",
+  "Choose interface design": "Выбрать дизайн интерфейса"
 }

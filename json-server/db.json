@@ -656,7 +656,8 @@
         "USER"
       ],
       "features": {
-        "isArticleRatingEnabled": true
+        "isArticleRatingEnabled": true,
+        "isAppRedesigned": true
       },
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsDbZ-wKLY24CLmjASafU4dTiw2hZZ2c_NJQ&usqp=CAU"
     },

@@ -78,5 +78,10 @@
   "{{count}} просмотров_zero": "{{count}} views",
   "{{count}} просмотров_one": "{{count}} view",
   "{{count}} просмотров_other": "{{count}} views",
-  "An error occurred while discovering the articles": "An error occurred while discovering the articles"
+  "An error occurred while discovering the articles": "An error occurred while discovering the articles",
+  "Old design": "Old design",
+  "New design": "New design",
+  "Settings": "Settings",
+  "User settings": "User settings",
+  "Choose interface design": "Choose interface design"
 }

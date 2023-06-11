@@ -8,6 +8,7 @@ import { ForbidenPage } from '@/pages/ForbidenPage'
 import { MainPage } from '@/pages/MainPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 import { ProfilePage } from '@/pages/ProfilePage'
+import { SettingsPage } from '@/pages/SettingsPage'
 import { type RouteProps } from 'react-router-dom'
 
 export type AppRouteProps = RouteProps & {
@@ -17,6 +18,7 @@ export type AppRouteProps = RouteProps & {
 
 export enum AppRoutes {
   MAIN = 'main',
+  SETTINGS = 'settings',
   ABOUT = 'about',
   PROFILE = 'profile',
   ARTICLES = 'articles',
@@ -30,6 +32,7 @@ export enum AppRoutes {
 }
 
 export const getRouteMain = () => '/';
+export const getRouteSettings = () => '/settings';
 export const getRouteAbout = () => '/about';
 export const getRouteProfile = (id: string) => `/profile/${id}`;
 export const getRouteArticles = () => '/articles';
@@ -43,6 +46,10 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.MAIN]: {
     path: getRouteMain(),
     element: <MainPage/>
+  },
+  [AppRoutes.SETTINGS]: {
+    path: getRouteSettings(),
+    element: <SettingsPage/>
   },
   [AppRoutes.ABOUT]: {
     path: getRouteAbout(),
