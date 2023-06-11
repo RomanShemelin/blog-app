@@ -16,6 +16,7 @@ const App = () => {
 
   useEffect(() => {
     if (!inited) {
+      console.log(inited)
       dispatch(userActions.initAuthData());
     }
   }, [dispatch, inited]);

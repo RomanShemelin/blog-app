@@ -21,8 +21,8 @@ export const userSlice = createSlice({
         const json = JSON.parse(user) as User
         state.authData = json
         setFeatureFlags(json.features)
+        state._inited = true
       }
-      state._inited = true
     },
     logout: (state) => {
       state.authData = undefined

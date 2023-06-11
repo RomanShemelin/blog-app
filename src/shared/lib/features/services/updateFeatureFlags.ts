@@ -30,7 +30,6 @@ ThunkConfig<string>
     );
 
     setFeatureFlags(allFeatures);
-
     return undefined;
   } catch (e) {
     console.log(e);

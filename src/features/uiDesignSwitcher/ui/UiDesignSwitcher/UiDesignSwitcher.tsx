@@ -43,7 +43,7 @@ export const UiDesignSwitcher = memo((props: UiDesignSwitcherProps) => {
         updateFeatureFlag({
           userId: authData.id,
           newFeatures: {
-            isAppRedesigned: !isAppRedesigned
+            isAppRedesigned: value === 'new'
           }
         })
       ).unwrap();
