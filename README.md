@@ -1,4 +1,3 @@
-[![2023-06-12-14-49-29.png](https://i.postimg.cc/52vkYY7R/2023-06-12-14-49-29.png)](https://postimg.cc/0zkChQqY)
 ## Запуск проекта
 
 ```
