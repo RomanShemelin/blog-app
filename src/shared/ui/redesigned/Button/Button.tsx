@@ -1,5 +1,5 @@
-import { type ButtonHTMLAttributes, memo, type ReactNode, forwardRef, ForwardedRef } from 'react';
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames';
+import { forwardRef, type ButtonHTMLAttributes, type ForwardedRef, type ReactNode } from 'react';
 import cls from './Button.module.scss';
 
 export type ButtonVariant = 'clear' | 'outline' | 'filled';
