@@ -1,22 +1,23 @@
-import { Suspense, useEffect } from 'react';
+import { getUserInited, userActions } from '@/entities/User';
+import { MainLayout } from '@/shared/layouts/MainLayout';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { useTheme } from './providers/ThemeProvider';
-import { AppRouter } from './providers/router';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
+import { Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserInited, userActions } from '@/entities/User';
-import { ToggleFeatures } from '@/shared/lib/features';
-import { MainLayout } from '@/shared/layouts/MainLayout';
+import { useAppToolbar } from './lib/useAppToolbar';
+import { AppRouter } from './providers/router';
+import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
   const { theme } = useTheme();
   const dispatch = useDispatch();
   const inited = useSelector(getUserInited);
+  const toolBar = useAppToolbar()
 
   useEffect(() => {
     if (!inited) {
-      console.log(inited)
       dispatch(userActions.initAuthData());
     }
   }, [dispatch, inited]);
@@ -42,6 +43,7 @@ const App = () => {
               header={<Navbar />}
               content={<AppRouter />}
               sidebar={<Sidebar />}
+              toolbar={toolBar}
             />
           </Suspense>
         </div>
