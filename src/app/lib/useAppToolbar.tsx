@@ -7,9 +7,7 @@ export function useAppToolbar () {
   const appRoute = useRouteChange()
   const toolbarByAppRoute: Partial<Record<AppRoutes, ReactElement>> = {
     [AppRoutes.ARTICLES]: <ScrollToolbar />,
-    [AppRoutes.ARTICLES_DETAILS]: <ScrollToolbar />,
-    [AppRoutes.MAIN]: <div>123</div>,
-    [AppRoutes.ABOUT]: <div>123</div>
+    [AppRoutes.ARTICLES_DETAILS]: <ScrollToolbar />
   };
   return toolbarByAppRoute[appRoute]
 }

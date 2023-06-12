@@ -1,7 +1,7 @@
 import { type ComponentStory, type ComponentMeta } from '@storybook/react'
 
 import { Avatar } from './Avatar'
-import AvatarImg from '../../assets/tests/storybook.jpg'
+import AvatarImg from '../../../assets/tests/storybook.jpg'
 
 export default {
   title: 'widjet/Avatar',

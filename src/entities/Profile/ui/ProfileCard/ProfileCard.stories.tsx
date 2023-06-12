@@ -3,6 +3,7 @@ import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
 import { ProfileCard } from './ProfileCard'
 import avatar from '@/shared/assets/tests/storybook.jpg'
+import { FeaturesFlagsDecorator } from '@/shared/config/storybook/FeaturesFlagsDecorator/FeaturesFlagsDecorator'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -15,8 +16,7 @@ export default {
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard{...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+const primaryArgs = {
   data: {
     username: 'admin',
     firstname: 'Igor',
@@ -27,6 +27,14 @@ Primary.args = {
     avatar
   }
 }
+
+export const Primary = Template.bind({})
+Primary.args = primaryArgs
+
+export const PrimaryRedesigned = Template.bind({})
+PrimaryRedesigned.args = primaryArgs
+PrimaryRedesigned.decorators = [FeaturesFlagsDecorator({ isAppRedesigned: true })]
+
 export const withError = Template.bind({})
 withError.args = {
   error: 'true'
