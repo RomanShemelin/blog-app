@@ -49,13 +49,13 @@ export function StarRating (props: StarRatingProps) {
     <div className={classNames(toggleFeatures({
       name: 'isAppRedesigned', off: () => cls.StarRating, on: () => cls.StarRatingRedesigned
     }), {}, [className])}>
-      {stars.map((star) => {
+      {stars.map((star, index) => {
         const commonProps = {
           className: classNames(cls.StarIcon, { [cls.selected]: isSelected }, [
             currentStarCount >= star ? cls.hovered : cls.normal
           ]),
           Svg: StarIcon,
-          key: star,
+          key: index,
           width: size,
           height: size,
           onMouseLeave: onLeave,
@@ -65,8 +65,8 @@ export function StarRating (props: StarRatingProps) {
           'data-selected': currentStarCount >= star
         }
         return (
-          // eslint-disable-next-line react/jsx-key
           <ToggleFeatures
+            key={star}
             feature="isAppRedesigned"
             on={
               <Icon
